@@ -6,8 +6,9 @@ public class MiPrimeraVentana {
 
 
         JFrame f = new JFrame();
-        f.setBounds(0, 0, 300, 600); // Tamaño
+        f.setBounds(800, 200, 300, 600); // Tamaño
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Para la finalizacion del programa
+
 
 
         // Este es el panel principal
@@ -24,6 +25,7 @@ public class MiPrimeraVentana {
         JLabel nombreLabel = new JLabel("Nombre:");
         JTextField nombreTextField = new JTextField(25);
 
+        // Crear etiqueta y campo de texto para el apellidos
         JLabel apellidosLabel = new JLabel("Apellidos:");
         JTextField apellidosTextField = new JTextField(25);
 
@@ -31,12 +33,15 @@ public class MiPrimeraVentana {
         JLabel sexoLabel = new JLabel("Sexo:");
         JTextField sexoTextField = new JTextField(25);
 
+        // Crear etiqueta y campo de texto para el nacionalidad
         JLabel nacionalidadLabel = new JLabel("Nacionalidad:");
         JTextField nacionalidadTextField = new JTextField(25);
 
+        // Crear etiqueta y campo de texto para el fecha de nacimiento
         JLabel FechaNacimientoLabel = new JLabel("FechaNacimiento:");
         JTextField FechaNacimientoTextField = new JTextField(25);
 
+        // Crear etiqueta y campo de texto para el domicilio
         JLabel DomicilioLabel = new JLabel("Domicilio:");
         JTextField DomicilioTextField = new JTextField(25);
 
@@ -70,7 +75,11 @@ public class MiPrimeraVentana {
 
 
         // Boton sin uso
+
         JButton submitButton = new JButton("ENVIAR");
+
+
+        JOptionPane.showConfirmDialog(submitButton, "Preparado para el formulario");
         panel.add(submitButton);
 
         // Mostrar la ventana
