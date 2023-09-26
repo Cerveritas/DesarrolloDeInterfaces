@@ -11,8 +11,11 @@ public class MiPrimeraVentana {
 
 
 
+
         // Este es el panel principal
         JPanel panel = new JPanel(new FlowLayout());
+
+
         f.add(panel);
 
 
@@ -47,6 +50,10 @@ public class MiPrimeraVentana {
 
 
 
+
+
+
+
         // Agregrar componentes al panel
         panel.add(DNIlabel);
         panel.add(DNItextField);
@@ -69,6 +76,8 @@ public class MiPrimeraVentana {
         panel.add(DomicilioLabel);
         panel.add(DomicilioTextField);
 
+
+
         // Agregar el panel a la vetana
         f.add(panel);
 
@@ -77,10 +86,10 @@ public class MiPrimeraVentana {
         // Boton sin uso
 
         JButton submitButton = new JButton("ENVIAR");
-
-
         JOptionPane.showConfirmDialog(submitButton, "Preparado para el formulario");
+
         panel.add(submitButton);
+
 
         // Mostrar la ventana
         f.setVisible(true); // Visibilidad
