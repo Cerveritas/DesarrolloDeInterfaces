@@ -6,7 +6,7 @@ public class MiPrimeraVentana {
 
 
         JFrame f = new JFrame();
-        f.setBounds(800, 200, 300, 600); // Tamaño
+        f.setBounds(800, 200, 300, 700); // Tamaño
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Para la finalizacion del programa
 
 
@@ -50,6 +50,9 @@ public class MiPrimeraVentana {
 
 
 
+        // Manera de insertar una imagen
+        ImageIcon imageIcon = new ImageIcon("C:\\Users\\SergioCerveraJ\\IdeaProjects\\DesarrolloDeInterfaces\\Images\\descarga.jfif");
+        JLabel labelConImagen = new JLabel(imageIcon);
 
 
 
@@ -78,21 +81,31 @@ public class MiPrimeraVentana {
 
 
 
+
         // Agregar el panel a la vetana
         f.add(panel);
 
 
 
-        // Boton sin uso
 
+        // Boton sin uso
         JButton submitButton = new JButton("ENVIAR");
         JOptionPane.showConfirmDialog(submitButton, "Preparado para el formulario");
 
         panel.add(submitButton);
 
 
+        // Agregamos la imagen debajo del boton de esta manera
+        panel.add(labelConImagen);
+
+
+
+
+
+
         // Mostrar la ventana
         f.setVisible(true); // Visibilidad
+
 
     }
 }
