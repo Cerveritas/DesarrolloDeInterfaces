@@ -1,4 +1,7 @@
 import javax.swing.*;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 
 public class MiPrimeraCalculadora {
@@ -14,18 +17,26 @@ public class MiPrimeraCalculadora {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Para la finalizacion del programa
 
 
+        JTextField textResult = new JTextField();
+            textResult.setPreferredSize(new Dimension(400,50));
 
-        JTextField textResult = new JTextField(40);
 
         JPanel panelPrincipal = new JPanel();
+            panelPrincipal.setBackground(Color.magenta);
 
         JPanel panelResultado = new JPanel();
+            panelResultado.setBackground(Color.magenta);
+            panelResultado.setPreferredSize(new Dimension(450, 50));
+            panelResultado.setBorder(BorderFactory.createTitledBorder("💥-RESULTADO-💥"));
 
-        JPanel panelEspecia = new JPanel(new GridLayout(1, 2,1,1));
+
+        JPanel panelEspecia = new JPanel(new GridLayout(1, 2,10,10));
             panelEspecia.setPreferredSize(new Dimension(400,90));
+            panelEspecia.setBackground(Color.MAGENTA);
 
-        JPanel panelBotones = new JPanel(new GridLayout(5, 4,1,1));
+        JPanel panelBotones = new JPanel(new GridLayout(4, 4,10,10));
             panelBotones.setPreferredSize(new Dimension(400,300));
+            panelBotones.setBackground(Color.MAGENTA);
 
 
 
@@ -35,48 +46,63 @@ public class MiPrimeraCalculadora {
 
 
 
+        JButton botonC = new JButton("C");
+                botonC.setBackground(Color.gray);
+                botonC.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.DARK_GRAY, Color.BLACK));
 
-            JButton botonDividir = new JButton("C");
-                botonDividir.setBackground(Color.decode("FFFFFF"));
-            JButton botonMultiplicar = new JButton("+/-");
-                botonMultiplicar.setBackground(Color.lightGray);
-            JButton botonRestar = new JButton("/");
-                botonRestar.setBackground(Color.lightGray);
-            JButton botonSumar = new JButton("*");
-                botonSumar.setBackground(Color.lightGray);
-            JButton botonIgual = new JButton("7");
-                botonIgual.setBackground(Color.GRAY);
-            JButton botonPunto = new JButton("8");
-                botonPunto.setBackground(Color.GRAY);
-            JButton boton7 = new JButton("9");
-                boton7.setBackground(Color.GRAY);
-            JButton boton8 = new JButton("-");
-                boton8.setBackground(Color.lightGray);
-            JButton boton9 = new JButton("4");
-                boton9.setBackground(Color.GRAY);
-            JButton boton4 = new JButton("5");
-                boton4.setBackground(Color.GRAY);
-            JButton boton5 = new JButton("6");
-                boton5.setBackground(Color.GRAY);
-            JButton boton6 = new JButton("+");
-                boton6.setBackground(Color.lightGray);
-            JButton boton1 = new JButton("1");
-                boton1.setBackground(Color.GRAY);
-            JButton boton2 = new JButton("2");
-                boton2.setBackground(Color.GRAY);
-            JButton boton3 = new JButton("3");
-                boton3.setBackground(Color.GRAY);
-            JButton boton0 = new JButton("0");
-                boton0.setBackground(Color.GRAY);
-
-            JButton botonIguala = new JButton("=");
-                botonIguala.setBackground(Color.decode("FFFFFF"));
-            JButton botonreset = new JButton("RESET");
-                botonreset.setBackground(Color.decode("FFFFFF"));
+        JButton botonMasMenos = new JButton("+/-");
+               botonMasMenos.setBackground(Color.lightGray);
 
 
+        JButton botonDividir = new JButton("/");
+            botonDividir.setBackground(Color.lightGray);
 
-       // JPanel panelNumerico = new JPanel(new GridLayout(6, 0));
+        JButton botonMultiplicar = new JButton("*");
+            botonMultiplicar.setBackground(Color.lightGray);
+
+        JButton boton7 = new JButton("7");
+            boton7.setBackground(Color.WHITE);
+
+        JButton boton8 = new JButton("8");
+            boton8.setBackground(Color.WHITE);
+
+        JButton boton9 = new JButton("9");
+            boton9.setBackground(Color.WHITE);
+
+        JButton botonRestar = new JButton("-");
+            botonRestar.setBackground(Color.lightGray);
+
+        JButton boton4 = new JButton("4");
+            boton4.setBackground(Color.WHITE);
+
+        JButton boton5 = new JButton("5");
+            boton5.setBackground(Color.WHITE);
+
+        JButton boton6 = new JButton("6");
+            boton6.setBackground(Color.WHITE);
+
+        JButton botonSumar = new JButton("+");
+            botonSumar.setBackground(Color.lightGray);
+
+        JButton boton1 = new JButton("1");
+            boton1.setBackground(Color.WHITE);
+
+        JButton boton2 = new JButton("2");
+            boton2.setBackground(Color.WHITE);
+
+        JButton boton3 = new JButton("3");
+            boton3.setBackground(Color.WHITE);
+
+        JButton boton0 = new JButton("0");
+            boton0.setBackground(Color.WHITE);
+
+        /***********************************************************************/
+        JButton botonIgual = new JButton("=");
+            botonIgual.setBackground(Color.lightGray);
+
+        JButton botonReset = new JButton("RESET");
+            botonReset.setBackground(Color.gray);
+            botonReset.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.DARK_GRAY, Color.BLACK));
 
 
 
@@ -85,28 +111,31 @@ public class MiPrimeraCalculadora {
 
 
 
+
+        panelBotones.add(botonC);
+        panelBotones.add(botonMasMenos);
         panelBotones.add(botonDividir);
         panelBotones.add(botonMultiplicar);
-        panelBotones.add(botonRestar);
-        panelBotones.add(botonSumar);
-        panelBotones.add(botonIgual);
-        panelBotones.add(botonPunto);
         panelBotones.add(boton7);
         panelBotones.add(boton8);
         panelBotones.add(boton9);
+        panelBotones.add(botonRestar);
         panelBotones.add(boton4);
         panelBotones.add(boton5);
         panelBotones.add(boton6);
+        panelBotones.add(botonSumar);
         panelBotones.add(boton1);
         panelBotones.add(boton2);
         panelBotones.add(boton3);
         panelBotones.add(boton0);
 
-        panelEspecia.add(botonIguala);
-        panelEspecia.add(botonreset);
+        panelEspecia.add(botonIgual);
+        panelEspecia.add(botonReset);
 
 
         panelResultado.add(textResult);
+
+
 
 
 
