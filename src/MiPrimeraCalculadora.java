@@ -18,7 +18,7 @@ public class MiPrimeraCalculadora {
 
 
         JTextField textResult = new JTextField();
-            textResult.setPreferredSize(new Dimension(400,50));
+            textResult.setPreferredSize(new Dimension(400,35));
 
 
         JPanel panelPrincipal = new JPanel();
@@ -37,6 +37,8 @@ public class MiPrimeraCalculadora {
         JPanel panelBotones = new JPanel(new GridLayout(4, 4,10,10));
             panelBotones.setPreferredSize(new Dimension(400,300));
             panelBotones.setBackground(Color.MAGENTA);
+
+
 
 
 
@@ -134,9 +136,6 @@ public class MiPrimeraCalculadora {
 
 
         panelResultado.add(textResult);
-
-
-
 
 
 
