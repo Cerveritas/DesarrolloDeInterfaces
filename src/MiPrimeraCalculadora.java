@@ -3,6 +3,8 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MiPrimeraCalculadora {
 
@@ -17,7 +19,7 @@ public class MiPrimeraCalculadora {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Para la finalizacion del programa
 
 
-        JTextField textResult = new JTextField();
+        JTextField textResult = new JTextField("Recarte es una putita");
             textResult.setPreferredSize(new Dimension(400,35));
 
 
@@ -56,10 +58,10 @@ public class MiPrimeraCalculadora {
                botonMasMenos.setBackground(Color.lightGray);
 
 
-        JButton botonDividir = new JButton("/");
+        JButton botonDividir = new JButton("➗");
             botonDividir.setBackground(Color.lightGray);
 
-        JButton botonMultiplicar = new JButton("*");
+        JButton botonMultiplicar = new JButton("❌");
             botonMultiplicar.setBackground(Color.lightGray);
 
         JButton boton7 = new JButton("7");
@@ -71,7 +73,7 @@ public class MiPrimeraCalculadora {
         JButton boton9 = new JButton("9");
             boton9.setBackground(Color.WHITE);
 
-        JButton botonRestar = new JButton("-");
+        JButton botonRestar = new JButton("➖");
             botonRestar.setBackground(Color.lightGray);
 
         JButton boton4 = new JButton("4");
@@ -83,7 +85,7 @@ public class MiPrimeraCalculadora {
         JButton boton6 = new JButton("6");
             boton6.setBackground(Color.WHITE);
 
-        JButton botonSumar = new JButton("+");
+        JButton botonSumar = new JButton("➕");
             botonSumar.setBackground(Color.lightGray);
 
         JButton boton1 = new JButton("1");
@@ -160,5 +162,96 @@ public class MiPrimeraCalculadora {
 
 
 
+
+
+        //ACCIONES ASIGNADOS A LOS BOTONES ❤
+
+        // accion boton 0
+        boton0.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textResult.setText("0");
+            }
+        });
+
+        // accion boton 1
+        boton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textResult.setText("1");
+            }
+        });
+
+        // accion boton 2
+        boton2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textResult.setText("2");
+            }
+        });
+
+        // accion boton 3
+        boton3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textResult.setText("3");
+            }
+        });
+
+        // accion boton 4
+        boton4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textResult.setText("4");
+            }
+        });
+
+        // accion boton 5
+        boton5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textResult.setText("5");
+            }
+        });
+
+        // accion boton 6
+        boton6.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textResult.setText("6");
+            }
+        });
+
+        // accion boton 7
+        boton7.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textResult.setText("7");
+            }
+        });
+
+        // accion boton 8
+        boton8.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textResult.setText("8");
+            }
+        });
+
+        // accion boton 9
+        boton9.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textResult.setText("9");
+            }
+        });
+
+        // accion boton Reset
+        botonReset.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textResult.setText("");
+            }
+        });
     }
 }
