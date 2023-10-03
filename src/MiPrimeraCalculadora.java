@@ -141,11 +141,6 @@ public class MiPrimeraCalculadora {
 
 
 
-
-
-
-
-
         panelPrincipal.add(panelResultado);
         panelPrincipal.add(panelBotones);
         panelPrincipal.add(panelEspecia);
