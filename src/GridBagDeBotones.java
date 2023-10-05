@@ -6,16 +6,18 @@ public class GridBagDeBotones {
 
 
 
-        JFrame frame = new JFrame();
+        //Creamos el Jfram y le asignamos el tamaño y alguna caracteristica
+        JFrame frame = new JFrame("Mi Cuestionario");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setBounds(200,200,500,450);
 
 
+        //Creamos el panel
         JPanel panelUnico = new JPanel(new GridBagLayout());
 
 
 
-
+        // Creamos cada Jlabel con su respectivo cuadro de texto y el boton
 
         JLabel lName = new JLabel("FUll Name");
             JTextField nameField = new JTextField();
@@ -59,22 +61,10 @@ public class GridBagDeBotones {
                 panelUnico.add(boton, new GridBagConstraints(3,5,4,1,1.0,1.0, GridBagConstraints.NORTHEAST, GridBagConstraints.NORTHEAST, new Insets(5,0,0,10),0,0));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        //Agregamos al frame el panel y le damos visibilidad
 
         frame.add(panelUnico);
+        frame.setResizable(false);
         frame.setVisible(true);
     }
 }
