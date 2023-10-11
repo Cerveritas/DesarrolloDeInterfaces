@@ -15,6 +15,7 @@ public class MyJListWindow {
         JPanel panelPrincipal = new JPanel(new GridBagLayout());
 
 
+
         JLabel jlist = new JLabel("Jlist");
         panelPrincipal.add(jlist, new GridBagConstraints(0, 0, 0, 1, 0, 0, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(0, 35, 20, 35), 0, 0));
         jlist.setBorder(new BevelBorder(1));
@@ -123,13 +124,6 @@ public class MyJListWindow {
 
             }
         });
-
-
-
-
-
-
-
 
 
 
