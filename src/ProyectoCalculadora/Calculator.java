@@ -3,9 +3,12 @@ package ProyectoCalculadora;
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class Calculator {
 
@@ -35,21 +38,21 @@ public class Calculator {
 
 
         JPanel panelPrincipal = new JPanel();
-            panelPrincipal.setBackground(Color.LIGHT_GRAY);
+            panelPrincipal.setBackground(Color.decode("#A069E0"));
 
         JPanel panelResultado = new JPanel();
-            panelResultado.setBackground(Color.LIGHT_GRAY);
+            panelResultado.setBackground(Color.decode("#A069E0"));
             panelResultado.setPreferredSize(new Dimension(300, 70));
             panelResultado.setBorder(BorderFactory.createTitledBorder("💥-RESULTADO-💥"));
 
 
         JPanel panelEspecia = new JPanel(new GridLayout(1, 2,10,10));
             panelEspecia.setPreferredSize(new Dimension(250,80));
-            panelEspecia.setBackground(Color.LIGHT_GRAY);
+            panelEspecia.setBackground(Color.decode("#A069E0"));
 
         JPanel panelBotones = new JPanel(new GridLayout(4, 4,10,10));
             panelBotones.setPreferredSize(new Dimension(250,200));
-            panelBotones.setBackground(Color.LIGHT_GRAY);
+            panelBotones.setBackground(Color.decode("#A069E0"));
 
 
 
@@ -68,12 +71,13 @@ public class Calculator {
 
 
         // botonExit
-        JButton botonExit = new JButton("C" );
-            botonExit.setBackground(Color.decode("#DB9D00"));
+        JButton botonExit = new JButton("X" );
+            botonExit.setBackground(Color.decode("#04E0DD"));
             botonExit.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.DARK_GRAY, Color.BLACK));
             botonExit.setPreferredSize(new Dimension(40,40));
             botonExit.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
             botonExit.setBorder(border);
+            botonExit.setBorder(new LineBorder(Color.BLACK, 5));
 
         // agregacion de boton exit al panel de opciones
         panelOpciones.add(botonExit, BorderLayout.EAST);
@@ -85,6 +89,18 @@ public class Calculator {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
+            }
+        });
+
+        botonExit.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                botonExit.setBackground(Color.decode("#9BC9E0"));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                botonExit.setBackground(Color.decode("#04E0DD"));
             }
         });
 
@@ -166,11 +182,13 @@ public class Calculator {
         /***********************************************************************/
 
         JButton botonIgual = new JButton("=");
-            botonIgual.setBackground(Color.decode("#DB9D00"));
+            botonIgual.setBackground(Color.decode("#04E0DD"));
+            botonIgual.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
 
         JButton botonReset = new JButton("RESET");
             botonReset.setBackground(Color.decode("#990014"));
             botonReset.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.DARK_GRAY, Color.BLACK));
+            botonReset.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
 
 
 
@@ -227,6 +245,7 @@ public class Calculator {
 
 
 
+
         //ACCIONES ASIGNADOS A LOS BOTONES ❤
 
         // accion boton 0
@@ -238,6 +257,18 @@ public class Calculator {
                 } else {
                     textResult.setText(textResult.getText() + "0");
                 }
+            }
+        });
+
+        boton0.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                boton0.setBackground(Color.LIGHT_GRAY);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                boton0.setBackground(Color.WHITE);
             }
         });
 
@@ -253,6 +284,18 @@ public class Calculator {
             }
         });
 
+        boton1.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                boton1.setBackground(Color.LIGHT_GRAY);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                boton1.setBackground(Color.WHITE);
+            }
+        });
+
         // accion boton 2
         boton2.addActionListener(new ActionListener() {
             @Override
@@ -262,6 +305,18 @@ public class Calculator {
                 } else {
                     textResult.setText(textResult.getText() + "2");
                 }
+            }
+        });
+
+        boton2.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                boton2.setBackground(Color.LIGHT_GRAY);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                boton2.setBackground(Color.WHITE);
             }
         });
 
@@ -277,6 +332,18 @@ public class Calculator {
             }
         });
 
+        boton3.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                boton3.setBackground(Color.LIGHT_GRAY);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                boton3.setBackground(Color.WHITE);
+            }
+        });
+
         // accion boton 4
         boton4.addActionListener(new ActionListener() {
             @Override
@@ -286,6 +353,18 @@ public class Calculator {
                 } else {
                     textResult.setText(textResult.getText() + "4");
                 }
+            }
+        });
+
+        boton4.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                boton4.setBackground(Color.LIGHT_GRAY);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                boton4.setBackground(Color.WHITE);
             }
         });
 
@@ -301,6 +380,18 @@ public class Calculator {
             }
         });
 
+        boton5.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                boton5.setBackground(Color.LIGHT_GRAY);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                boton5.setBackground(Color.WHITE);
+            }
+        });
+
         // accion boton 6
         boton6.addActionListener(new ActionListener() {
             @Override
@@ -310,6 +401,18 @@ public class Calculator {
                 } else {
                     textResult.setText(textResult.getText() + "6");
                 }
+            }
+        });
+
+        boton6.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                boton6.setBackground(Color.LIGHT_GRAY);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                boton6.setBackground(Color.WHITE);
             }
         });
 
@@ -325,6 +428,18 @@ public class Calculator {
             }
         });
 
+        boton7.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                boton7.setBackground(Color.LIGHT_GRAY);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                boton7.setBackground(Color.WHITE);
+            }
+        });
+
         // accion boton 8
         boton8.addActionListener(new ActionListener() {
             @Override
@@ -337,6 +452,18 @@ public class Calculator {
             }
         });
 
+        boton8.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                boton8.setBackground(Color.LIGHT_GRAY);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                boton8.setBackground(Color.WHITE);
+            }
+        });
+
         // accion boton 9
         boton9.addActionListener(new ActionListener() {
             @Override
@@ -346,6 +473,18 @@ public class Calculator {
                 } else {
                     textResult.setText(textResult.getText() + "9");
                 }
+            }
+        });
+
+        boton9.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                boton9.setBackground(Color.LIGHT_GRAY);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                boton9.setBackground(Color.WHITE);
             }
         });
 
@@ -440,6 +579,8 @@ public class Calculator {
                 }
 
 
+
+
                 // otra manera de hacer las operaciones con elses
 
                 /*
@@ -459,9 +600,31 @@ public class Calculator {
                     }*/
 
             }
+
         });
 
-    }
+
+        botonIgual.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                botonIgual.setBackground(Color.decode("#9BC9E0"));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                botonIgual.setBackground(Color.decode("#04E0DD"));
+            }
+        });
+
+
+
+
+
+
+
+
+
+    } // <-- cierre del main
 }
 
 

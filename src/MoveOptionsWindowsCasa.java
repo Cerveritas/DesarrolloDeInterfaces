@@ -9,6 +9,7 @@ public class MoveOptionsWindowsCasa {
     public static void main(String[] args) {
 
 
+        // CONSTRUCCION DEL FRAME Y DEL PANEL
 
         JFrame frame = new JFrame("MoveOptionsWindowsCasa");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -21,6 +22,7 @@ public class MoveOptionsWindowsCasa {
 
 
 /********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+        // AQUI CREAMOS EL PANEL DE LA IZQUIERDA ALMACENANDO LOS NOMBRES EN UN ARRAYLIST
 
         DefaultListModel<String> listModelIZQ = new DefaultListModel<>();
         JList<String> listaNombresIZQ = new JList<>(listModelIZQ);
@@ -42,13 +44,13 @@ public class MoveOptionsWindowsCasa {
 
 
         ScrollPane scrollPaneIZQ = new ScrollPane();
-        scrollPaneIZQ.add(listaNombresIZQ);
-        panelPrincipal.add(scrollPaneIZQ, new GridBagConstraints(0, 0, 1, 4, 1.0, 1.0, GridBagConstraints.WEST, GridBagConstraints.BOTH, new Insets(10, 10, 10, 10), 0, 0));
-        scrollPaneIZQ.setPreferredSize(new Dimension(300, 100));
+            scrollPaneIZQ.add(listaNombresIZQ);
+                panelPrincipal.add(scrollPaneIZQ, new GridBagConstraints(0, 0, 1, 4, 1.0, 1.0, GridBagConstraints.WEST, GridBagConstraints.BOTH, new Insets(10, 10, 10, 10), 0, 0));
+                    scrollPaneIZQ.setPreferredSize(new Dimension(300, 100));
 
 
 /********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-
+        // AQUI LO MISMO QUE EN EL CASO ANTERIOR PERO UNICAMENTE CREAMOS EL PANEL DE LA DERECHA Y EL ARRAYLIST VACIO
 
 
 
@@ -68,6 +70,8 @@ public class MoveOptionsWindowsCasa {
 
 
 /********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+        // AQUI CREAMOS LOS DIFERENTES BOTONES QUE VAMOS A USAR
+
 
         JButton botonDERDER = new JButton(">>");
             panelPrincipal.add(botonDERDER, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(10, 10, 10, 10), 0, 0));
@@ -88,11 +92,13 @@ public class MoveOptionsWindowsCasa {
 
 /********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 
-        frame.add(panelPrincipal);
-        frame.setVisible(true);
-        frame.setResizable(false);
+
+        frame.add(panelPrincipal);  // añadimos el panel principal en el frame
+        frame.setVisible(true);     // hacemos visible el frame
+        frame.setResizable(false);  // cancelamos el uso de hacer mas grande o pequeña la ventana de la app
 
 /********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+
 
 
 
@@ -152,6 +158,8 @@ public class MoveOptionsWindowsCasa {
 
                 for (String elemento : elementos) {
                     listModelDER.addElement(elemento);
+
+
                 }
             }
         });
@@ -177,7 +185,6 @@ public class MoveOptionsWindowsCasa {
                 for (String elemento : elementos) {
                     listModelIZQ.addElement(elemento);
                 }
-
             }
         });
     }
