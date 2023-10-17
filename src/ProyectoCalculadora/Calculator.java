@@ -28,6 +28,7 @@ public class Calculator {
         Font font = new Font("Arial", Font.PLAIN, 35);
         textResult.setFont(font);
         textResult.setHorizontalAlignment(SwingConstants.RIGHT);
+        textResult.setBackground(Color.decode("#B7ACDF"));
 
 
         JPanel panelPrincipal = new JPanel();
@@ -103,9 +104,10 @@ public class Calculator {
             botonC.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.DARK_GRAY, Color.BLACK));
             botonC.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
 
-        JButton botonMasMenos = new JButton("+/-");
-            botonMasMenos.setBackground(Color.lightGray);
-            botonMasMenos.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
+        JButton botonFactorizacion = new JButton("F");
+            botonFactorizacion.setBackground(Color.decode("#EB23D7"));
+            botonFactorizacion.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.DARK_GRAY, Color.BLACK));
+            botonFactorizacion.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
 
 
         JButton botonDividir = new JButton("➗");
@@ -177,7 +179,7 @@ public class Calculator {
 
 
         panelBotones.add(botonC);
-        panelBotones.add(botonMasMenos);
+        panelBotones.add(botonFactorizacion);
         panelBotones.add(botonDividir);
         panelBotones.add(botonMultiplicar);
         panelBotones.add(boton7);
@@ -603,14 +605,18 @@ public class Calculator {
         });
 
 
-        JLabel jLabel1 = new JLabel("©CopiRight Sergio Cervera Jimenez");
-        JPanel panelk = new JPanel();
-        panelPrincipal.add(panelk);
-        panelk.add(jLabel1);
-        panelk.setBackground(Color.decode("#A069E0"));
-        panelk.setPreferredSize(new Dimension(300, 20));
+        JButton botonEstelar = new JButton("©CopiRight Sergio Cervera Jimenez");
+        JPanel panelEstelar = new JPanel();
+        panelPrincipal.add(panelEstelar);
+        panelEstelar.add(botonEstelar);
+        botonEstelar.setBackground(Color.decode("#A069E0"));
+        panelEstelar.setBackground(Color.decode("#A069E0"));
         Font font3 = new Font("Arial", Font.PLAIN, 10);
-        jLabel1.setFont(font3);
+        botonEstelar.setFont(font3);
+        //botonEstelar.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED, Color.decode("#A069E0"), Color.decode("#A069E0")));
+        botonEstelar.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
+        botonEstelar.setBorderPainted(false);
+
 
 
 
@@ -666,7 +672,7 @@ public class Calculator {
         });
 
 
-        // Resto de tu código para calculatorPanel...
+
 
         // Configura los componentes de secondPanel
 
@@ -711,9 +717,10 @@ public class Calculator {
 
         JTextField textResults = new JTextField("");
         textResults.setPreferredSize(new Dimension(250, 60));
-        font = new Font("Arial", Font.PLAIN, 35);
-        textResult.setFont(font);
-        textResult.setHorizontalAlignment(SwingConstants.RIGHT);
+        Font fontResults = new Font("Arial", Font.PLAIN, 35);
+        textResults.setFont(fontResults);
+        textResults.setHorizontalAlignment(SwingConstants.RIGHT);
+        textResults.setBackground(Color.decode("#B7ACDF"));
 
 
         secondPanel.add(textResults);
@@ -765,38 +772,6 @@ public class Calculator {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         frame.add(secondPanel);
 
         // Inicialmente, muestra el panel de la calculadora
@@ -809,25 +784,227 @@ public class Calculator {
 
 
 
+/**********************************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************************/
+////////////////////////////////////////COMIENZO DEL TERCER FRAME////////////////////////////////////////
+
+
+        JPanel tercerPanel = new JPanel();
+        tercerPanel.setBackground(Color.decode("#A069E0"));
+
+        botonFactorizacion.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.getContentPane().remove(panelPrincipal);
+                frame.getContentPane().add(tercerPanel);
+                frame.revalidate();
+                frame.repaint();
+            }
+        });
+
+
+
+
+        // Configura los componentes de secondPanel
+
+        JButton backButton2 = new JButton("Volver a la Calculadora");
+        backButton2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.getContentPane().remove(tercerPanel);
+                frame.getContentPane().add(panelPrincipal);
+                frame.revalidate();
+                frame.repaint();
+            }
+        });
+
+
+        backButton2.setBackground(Color.decode("#EB23D7"));
+        backButton2.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.DARK_GRAY, Color.BLACK));
+        backButton2.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
+        backButton2.setPreferredSize(new Dimension(400, 60));
+
+
+
+
+        tercerPanel.add(backButton2);
+
+        // Resto de código para secondPanel...
+
+
+        JPanel panelLabelFac = new JPanel();
+        tercerPanel.add(panelLabelFac);
+        JLabel labelFac = new JLabel("INDICA EL NUMERO A FACTORIZAR");
+        panelLabelFac.add(labelFac);
+        panelLabelFac.setBackground(Color.decode("#A069E0"));
+
+
+        JTextField jTextFieldFac = new JTextField();
+        tercerPanel.add(jTextFieldFac);
+        jTextFieldFac.setPreferredSize(new Dimension(300, 40));
+        jTextFieldFac.setBackground(Color.decode("#B7ACDF"));
+        Font fontFac = new Font("Arial", Font.PLAIN, 35);
+        jTextFieldFac.setFont(fontFac);
+        jTextFieldFac.setHorizontalAlignment(SwingConstants.RIGHT);
+
+
+
+        JButton botonFac = new JButton("CALCULAR FACTORIZACION");
+        tercerPanel.add(botonFac);
+        botonFac.setBackground(Color.decode("#04E0DD"));
+        botonFac.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.DARK_GRAY, Color.BLACK));
+        botonFac.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
+        botonFac.setPreferredSize(new Dimension(250, 50));
+
+
+
+        //Text Area Resultado
+        JTextArea taResultadoFact = new JTextArea();
+        JScrollPane spResultadoFact = new JScrollPane(taResultadoFact);
+        JScrollBar scrollBar = new JScrollBar();
+        //scrollBar.setBackground(COLOR_TEXTFIELD);
+        //scrollBar.setUI(new CustomScrollBarUI());
+        //scrollBar.setBorder(new LineBorder(COLOR_PRINCIPAL, 1));
+        spResultadoFact.setVerticalScrollBar(scrollBar);
+        taResultadoFact.setFont(new Font("Courier New", Font.BOLD, 16));
+        //taResultadoFact.setBackground(COLOR_TEXTFIELD);
+        taResultadoFact.setEditable(false);
+        //taResultadoFact.setBorder(new LineBorder(COLOR_SECUNDARIO));
+        tercerPanel.add(spResultadoFact);
+        spResultadoFact.setPreferredSize(new Dimension(250, 200));
+
+
+
+
+
+        botonFac.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+
+                String resultado = new String("Factorización de " +jTextFieldFac.getText());
+                int n = Integer.parseInt(jTextFieldFac.getText());
+                String espacio = " ";
+                int iaux = 0;
+                int l = Integer.parseInt(jTextFieldFac.getText());
+                String espacioauxiliar = "   ";
+                String espaciofinal= "   ";
+                int naux = Integer.parseInt(jTextFieldFac.getText());
+                for (int i= 2 ; i <=n;)
+                {
+                    int numdig = 0;
+                    int numdig2 = 0;
+                    if (n % i == 0) {
+                        for (int j = n; j > 0; j = j / 10) {
+                            numdig++;
+                        }
+                        resultado += ("\n" + espaciofinal + n+" | "+i);
+                        n = n / i;
+                        for (int k = n; k > 0; k = k / 10) {
+                            numdig2++;
+                        }
+                        while (numdig > numdig2) {
+                            espaciofinal = espaciofinal + espacio;
+                            numdig--;
+                        }
+                    }
+                    if (n % i != 0) {
+                        i++;
+                    }
+                    iaux = i;
+                }
+                if (n == iaux) {
+                    resultado += ("\n" + espaciofinal + iaux+" | " +iaux);}
+                int numdig = 0;
+                for (int j = naux; j > 0 ; j = j / 10) {
+                    numdig++;
+                }
+                while (numdig > 1) {
+                    espacioauxiliar = espacioauxiliar + espacio;
+                    numdig--;
+                }
+                resultado += ("\n" + espacioauxiliar + 1+" | " +1 + "\n");
+
+                taResultadoFact.setText(resultado);
+            }
+        });
 
 
 
 
 
 
+/**********************************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************************/
+////////////////////////////////////////COMIENZO DEL FRAME ESTELAR////////////////////////////////////////
 
 
 
 
 
 
+        // Acción del botón para abrir la segunda ventana
+        botonEstelar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                JFrame stelarFrame = new JFrame("Ventana Estelar");
+                stelarFrame.setBounds(800, 200, 320, 300); // Tamaño de la ventana estelar
+                stelarFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
 
 
 
 
+                JPanel panelRedaccion = new JPanel();
+                stelarFrame.add(panelRedaccion);
+                JTextArea textAreaEstelar = new JTextArea(
+                        "\"Quiero expresar mi sincera gratitud\ny reconocimiento " +
+                        "por el arduo \ntrabajo y esfuerzo que han sido\ninvertidos en la creación de esta\ncalculadora. " +
+                        "Este proyecto no habría\nsido posible sin el compromiso\ny esfuerazo realizado. " +
+                        "\nAgradezco profundamente sus\ncontribuciones,\nque han permitido que esta calculadora\nsea una herramienta valiosa para\nnuestros usuarios.\n " +
+                        "¡Gracias por su trabajo excepcional!\"");
+                panelRedaccion.add(textAreaEstelar);
+                textAreaEstelar.setPreferredSize(new Dimension(220,220));
 
 
+                textAreaEstelar.setEditable(false);
+
+
+                JButton botonExitEstelar = new JButton("EXIT");
+                JPanel panelBotonEstelear = new JPanel();
+                panelRedaccion.add(panelBotonEstelear);
+                panelBotonEstelear.add(botonExitEstelar);
+                botonExitEstelar.setBackground(Color.decode("#04E0DD"));
+                botonExitEstelar.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.DARK_GRAY, Color.BLACK));
+                botonExitEstelar.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
+                botonExitEstelar.setPreferredSize(new Dimension(250, 50));
+
+                botonExitEstelar.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        System.exit(0);
+                    }
+                });
+
+
+
+
+
+                // Muestra la segunda ventana
+                stelarFrame.setUndecorated(true);
+                stelarFrame.setVisible(true);
+                stelarFrame.setResizable(false);
+            }
+        });
     } // <-- cierre del main
 }
 
