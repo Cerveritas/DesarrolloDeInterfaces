@@ -718,6 +718,10 @@ public class Calculator {
         botonCalcularMCM.setPreferredSize(new Dimension(250, 50));
 
 
+        ScrollPane scrollPane = new ScrollPane();
+        secondPanel.add(scrollPane, new GridBagConstraints(0, 2, 3, 1, 1, 0, GridBagConstraints.CENTER, GridBagConstraints.CENTER, new Insets(5, 0, 10, 10), 0, 0));
+        scrollPane.setPreferredSize(new Dimension(200, 150));
+        scrollPane.setBackground(Color.WHITE);
 
 
 
