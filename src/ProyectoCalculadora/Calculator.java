@@ -3,12 +3,10 @@ package ProyectoCalculadora;
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
+import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 
 public class Calculator {
 
@@ -17,43 +15,37 @@ public class Calculator {
     public static String operador = "";
 
 
-
     public static void main(String[] args) {
 
 
-
-
-
         JFrame frame = new JFrame("CALCULATOR");
-            frame.setBounds(800, 200, 320, 450); // Tamaño
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Para la finalizacion del programa
+        frame.setBounds(800, 200, 320, 450); // Tamaño
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Para la finalizacion del programa
 
 
         JTextField textResult = new JTextField("0");
-            textResult.setPreferredSize(new Dimension(250,60));
+        textResult.setPreferredSize(new Dimension(250, 60));
         Font font = new Font("Arial", Font.PLAIN, 35);
-            textResult.setFont(font);
-            textResult.setHorizontalAlignment(SwingConstants.RIGHT);
-
+        textResult.setFont(font);
+        textResult.setHorizontalAlignment(SwingConstants.RIGHT);
 
 
         JPanel panelPrincipal = new JPanel();
-            panelPrincipal.setBackground(Color.decode("#A069E0"));
+        panelPrincipal.setBackground(Color.decode("#A069E0"));
 
         JPanel panelResultado = new JPanel();
-            panelResultado.setBackground(Color.decode("#A069E0"));
-            panelResultado.setPreferredSize(new Dimension(300, 70));
-            panelResultado.setBorder(BorderFactory.createTitledBorder("💥-RESULTADO-💥"));
+        panelResultado.setBackground(Color.decode("#A069E0"));
+        panelResultado.setPreferredSize(new Dimension(300, 70));
+        panelResultado.setBorder(BorderFactory.createTitledBorder("💥-RESULTADO-💥"));
 
 
-        JPanel panelEspecia = new JPanel(new GridLayout(1, 2,10,10));
-            panelEspecia.setPreferredSize(new Dimension(250,80));
-            panelEspecia.setBackground(Color.decode("#A069E0"));
+        JPanel panelEspecia = new JPanel(new GridLayout(1, 2, 10, 10));
+        panelEspecia.setPreferredSize(new Dimension(250, 80));
+        panelEspecia.setBackground(Color.decode("#A069E0"));
 
-        JPanel panelBotones = new JPanel(new GridLayout(4, 4,10,10));
-            panelBotones.setPreferredSize(new Dimension(250,200));
-            panelBotones.setBackground(Color.decode("#A069E0"));
-
+        JPanel panelBotones = new JPanel(new GridLayout(4, 4, 10, 10));
+        panelBotones.setPreferredSize(new Dimension(250, 200));
+        panelBotones.setBackground(Color.decode("#A069E0"));
 
 
 /********************************************************************************************************************************************************************************************************************/
@@ -63,21 +55,19 @@ public class Calculator {
         Border border = BorderFactory.createBevelBorder(BevelBorder.RAISED, Color.lightGray, Color.darkGray);
 
 
-
-
         // panel especial de las opciones
-        JPanel panelOpciones = new JPanel(new GridLayout(1,1,40,10));
-            panelPrincipal.add(panelOpciones);
+        JPanel panelOpciones = new JPanel(new GridLayout(1, 1, 40, 10));
+        panelPrincipal.add(panelOpciones);
 
 
         // botonExit
-        JButton botonExit = new JButton("X" );
-            botonExit.setBackground(Color.decode("#04E0DD"));
-            botonExit.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.DARK_GRAY, Color.BLACK));
-            botonExit.setPreferredSize(new Dimension(40,40));
-            botonExit.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
-            botonExit.setBorder(border);
-            botonExit.setBorder(new LineBorder(Color.BLACK, 5));
+        JButton botonExit = new JButton("X");
+        botonExit.setBackground(Color.decode("#04E0DD"));
+        botonExit.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.DARK_GRAY, Color.BLACK));
+        botonExit.setPreferredSize(new Dimension(40, 40));
+        botonExit.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
+        botonExit.setBorder(border);
+        botonExit.setBorder(new LineBorder(Color.BLACK, 5));
 
         // agregacion de boton exit al panel de opciones
         panelOpciones.add(botonExit, BorderLayout.EAST);
@@ -105,16 +95,11 @@ public class Calculator {
         });
 
 
-
 /********************************************************************************************************************************************************************************************************************/
 
 
-
-
-
-
-        JButton botonC = new JButton("C");
-            botonC.setBackground(Color.decode("#DB9D00"));
+        JButton botonC = new JButton("MCM");
+            botonC.setBackground(Color.decode("#EB23D7"));
             botonC.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.DARK_GRAY, Color.BLACK));
             botonC.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
 
@@ -191,13 +176,6 @@ public class Calculator {
             botonReset.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
 
 
-
-
-
-
-
-
-
         panelBotones.add(botonC);
         panelBotones.add(botonMasMenos);
         panelBotones.add(botonDividir);
@@ -219,9 +197,7 @@ public class Calculator {
         panelEspecia.add(botonReset);
 
 
-
         panelResultado.add(textResult);
-
 
 
         panelPrincipal.add(panelResultado);
@@ -233,17 +209,31 @@ public class Calculator {
         frame.add(panelPrincipal);
 
 
-
-
-
         frame.setUndecorated(true);
         frame.setVisible(true);
         frame.setResizable(false);
 
 
+        // movimiento de ventana
+        final Point[] initialClick = {null};
+        frame.addMouseListener(new MouseAdapter() {
+            public void mousePressed(MouseEvent e) {
+                initialClick[0] = e.getPoint();
+                frame.getComponentAt(initialClick[0]);
+            }
+        });
 
+        frame.addMouseMotionListener(new MouseMotionAdapter() {
+            public void mouseDragged(MouseEvent e) {
+                int thisX = frame.getLocation().x;
+                int thisY = frame.getLocation().y;
 
+                int xMoved = thisX + e.getX() - initialClick[0].x;
+                int yMoved = thisY + e.getY() - initialClick[0].y;
 
+                frame.setLocation(xMoved, yMoved);
+            }
+        });
 
 
         //ACCIONES ASIGNADOS A LOS BOTONES ❤
@@ -252,7 +242,7 @@ public class Calculator {
         boton0.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (textResult.getText().equals("0")){
+                if (textResult.getText().equals("0")) {
                     textResult.setText("0");
                 } else {
                     textResult.setText(textResult.getText() + "0");
@@ -276,7 +266,7 @@ public class Calculator {
         boton1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (textResult.getText().equals("0")){
+                if (textResult.getText().equals("0")) {
                     textResult.setText("1");
                 } else {
                     textResult.setText(textResult.getText() + "1");
@@ -300,7 +290,7 @@ public class Calculator {
         boton2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (textResult.getText().equals("0")){
+                if (textResult.getText().equals("0")) {
                     textResult.setText("2");
                 } else {
                     textResult.setText(textResult.getText() + "2");
@@ -324,7 +314,7 @@ public class Calculator {
         boton3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (textResult.getText().equals("0")){
+                if (textResult.getText().equals("0")) {
                     textResult.setText("3");
                 } else {
                     textResult.setText(textResult.getText() + "3");
@@ -348,7 +338,7 @@ public class Calculator {
         boton4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (textResult.getText().equals("0")){
+                if (textResult.getText().equals("0")) {
                     textResult.setText("4");
                 } else {
                     textResult.setText(textResult.getText() + "4");
@@ -372,7 +362,7 @@ public class Calculator {
         boton5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (textResult.getText().equals("0")){
+                if (textResult.getText().equals("0")) {
                     textResult.setText("5");
                 } else {
                     textResult.setText(textResult.getText() + "5");
@@ -396,7 +386,7 @@ public class Calculator {
         boton6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (textResult.getText().equals("0")){
+                if (textResult.getText().equals("0")) {
                     textResult.setText("6");
                 } else {
                     textResult.setText(textResult.getText() + "6");
@@ -420,7 +410,7 @@ public class Calculator {
         boton7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (textResult.getText().equals("0")){
+                if (textResult.getText().equals("0")) {
                     textResult.setText("7");
                 } else {
                     textResult.setText(textResult.getText() + "7");
@@ -444,7 +434,7 @@ public class Calculator {
         boton8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (textResult.getText().equals("0")){
+                if (textResult.getText().equals("0")) {
                     textResult.setText("8");
                 } else {
                     textResult.setText(textResult.getText() + "8");
@@ -468,7 +458,7 @@ public class Calculator {
         boton9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (textResult.getText().equals("0")){
+                if (textResult.getText().equals("0")) {
                     textResult.setText("9");
                 } else {
                     textResult.setText(textResult.getText() + "9");
@@ -545,16 +535,13 @@ public class Calculator {
         });
 
 
-
-
-
         // accion boton igual
         botonIgual.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 double numero2 = Double.parseDouble(textResult.getText());
 
-                switch (operador){
+                switch (operador) {
                     case "+": // <-- situacion SUMA
                         double resultado = numero1 + numero2;
                         textResult.setText(Double.toString(resultado));
@@ -575,10 +562,9 @@ public class Calculator {
                         textResult.setText(Double.toString(resultado));
                         break;
 
-                    default: textResult.setText("ERROR");
+                    default:
+                        textResult.setText("ERROR");
                 }
-
-
 
 
                 // otra manera de hacer las operaciones con elses
@@ -615,6 +601,186 @@ public class Calculator {
                 botonIgual.setBackground(Color.decode("#04E0DD"));
             }
         });
+
+
+
+
+
+// este se usa para abrir una ventana aparte, no dentro del mismo frame
+
+/*
+        // Acción del botón para abrir la segunda ventana
+        botonC.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                JFrame secondFrame = new JFrame("Segunda Ventana");
+                secondFrame.setBounds(800, 200, 320, 200); // Tamaño de la segunda ventana
+                secondFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+
+
+
+
+
+                // Agrega componentes a la segunda ventana
+                // (puedes agregar botones, campos de texto, etc., según tus necesidades)
+
+                // Muestra la segunda ventana
+                secondFrame.setVisible(true);
+            }
+        });
+*/
+
+
+/**********************************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************************/
+////////////////////////////////////////COMIENZO DEL SEGUNDO FRAME////////////////////////////////////////
+
+        JPanel secondPanel = new JPanel();
+        secondPanel.setBackground(Color.decode("#A069E0"));
+
+
+        botonC.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.getContentPane().remove(panelPrincipal);
+                frame.getContentPane().add(secondPanel);
+                frame.revalidate();
+                frame.repaint();
+            }
+        });
+
+
+        // Resto de tu código para calculatorPanel...
+
+        // Configura los componentes de secondPanel
+
+        JButton backButton = new JButton("Volver a la Calculadora");
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.getContentPane().remove(secondPanel);
+                frame.getContentPane().add(panelPrincipal);
+                frame.revalidate();
+                frame.repaint();
+            }
+        });
+
+
+        backButton.setBackground(Color.decode("#EB23D7"));
+        backButton.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.DARK_GRAY, Color.BLACK));
+        backButton.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
+        backButton.setPreferredSize(new Dimension(400, 60));
+
+
+
+
+        secondPanel.add(backButton);
+
+        // Resto de código para secondPanel...
+
+
+        JPanel panelTitulo = new JPanel();
+            panelTitulo.setBackground(Color.decode("#A069E0"));
+            secondPanel.add(panelTitulo);
+
+        JLabel label = new JLabel("INDICAME EL NUMERO A CALCULAR");
+            panelTitulo.add(label);
+            Font fontLabel = new Font("Arial", Font.PLAIN, 16);
+            label.setFont(fontLabel);
+                EmptyBorder margenPanelTitulo = new EmptyBorder(25, 20, 25, 20);
+                    panelTitulo.setBorder(margenPanelTitulo);
+
+
+
+        JTextField textResults = new JTextField("");
+        textResults.setPreferredSize(new Dimension(250, 60));
+        font = new Font("Arial", Font.PLAIN, 35);
+        textResult.setFont(font);
+        textResult.setHorizontalAlignment(SwingConstants.RIGHT);
+
+
+        secondPanel.add(textResults);
+
+
+
+
+        JButton botonCalcularMCM = new JButton("CALCULAR");
+            secondPanel.add(botonCalcularMCM);
+        botonCalcularMCM.setBackground(Color.decode("#04E0DD"));
+        botonCalcularMCM.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.DARK_GRAY, Color.BLACK));
+        botonCalcularMCM.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
+        botonCalcularMCM.setPreferredSize(new Dimension(250, 50));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        frame.add(secondPanel);
+
+        // Inicialmente, muestra el panel de la calculadora
+
+
+
+        secondPanel.setVisible(false);
+        frame.setLayout(new CardLayout());
+        frame.setVisible(true);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
