@@ -98,7 +98,7 @@ public class Calculator {
 /********************************************************************************************************************************************************************************************************************/
 
 
-        JButton botonC = new JButton("MCM");
+        JButton botonC = new JButton("√");
             botonC.setBackground(Color.decode("#EB23D7"));
             botonC.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.DARK_GRAY, Color.BLACK));
             botonC.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
@@ -171,7 +171,7 @@ public class Calculator {
             botonIgual.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
 
         JButton botonReset = new JButton("RESET");
-            botonReset.setBackground(Color.decode("#990014"));
+            botonReset.setBackground(Color.decode("#D4AAEA"));
             botonReset.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.DARK_GRAY, Color.BLACK));
             botonReset.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
 
@@ -603,6 +603,16 @@ public class Calculator {
         });
 
 
+        JLabel jLabel1 = new JLabel("©CopiRight Sergio Cervera Jimenez");
+        JPanel panelk = new JPanel();
+        panelPrincipal.add(panelk);
+        panelk.add(jLabel1);
+        panelk.setBackground(Color.decode("#A069E0"));
+        panelk.setPreferredSize(new Dimension(300, 20));
+        Font font3 = new Font("Arial", Font.PLAIN, 10);
+        jLabel1.setFont(font3);
+
+
 
 
 
@@ -698,6 +708,7 @@ public class Calculator {
 
 
 
+
         JTextField textResults = new JTextField("");
         textResults.setPreferredSize(new Dimension(250, 60));
         font = new Font("Arial", Font.PLAIN, 35);
@@ -710,24 +721,47 @@ public class Calculator {
 
 
 
-        JButton botonCalcularMCM = new JButton("CALCULAR");
-            secondPanel.add(botonCalcularMCM);
-        botonCalcularMCM.setBackground(Color.decode("#04E0DD"));
-        botonCalcularMCM.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.DARK_GRAY, Color.BLACK));
-        botonCalcularMCM.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
-        botonCalcularMCM.setPreferredSize(new Dimension(250, 50));
+        JButton botonCalcularRC = new JButton("CALCULAR");
+            secondPanel.add(botonCalcularRC);
+        botonCalcularRC.setBackground(Color.decode("#04E0DD"));
+        botonCalcularRC.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.DARK_GRAY, Color.BLACK));
+        botonCalcularRC.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
+        botonCalcularRC.setPreferredSize(new Dimension(250, 50));
 
 
+
+/*
         ScrollPane scrollPane = new ScrollPane();
         secondPanel.add(scrollPane, new GridBagConstraints(0, 2, 3, 1, 1, 0, GridBagConstraints.CENTER, GridBagConstraints.CENTER, new Insets(5, 0, 10, 10), 0, 0));
         scrollPane.setPreferredSize(new Dimension(200, 150));
         scrollPane.setBackground(Color.WHITE);
+*/
 
 
+        JTextArea res = new JTextArea("");
+        res.setPreferredSize(new Dimension(250, 60));
+        font = new Font("Arial", Font.PLAIN, 35);
+        res.setFont(font);
+        //res.setHorizontalAlignment(SwingConstants.RIGHT);
+        res.setPreferredSize(new Dimension(300,170));
+        res.setWrapStyleWord(true);
+        res.setLineWrap(true);
 
 
+        secondPanel.add(res);
+
+        botonCalcularRC.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                double numeroUser = Integer.parseInt(textResults.getText());
+                double raiz = Math.pow(numeroUser, 0.5);
+
+                res.setText(String.valueOf(raiz));
 
 
+            }
+        });
 
 
 
