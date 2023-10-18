@@ -104,7 +104,7 @@ public class Calculator {
             botonC.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.DARK_GRAY, Color.BLACK));
             botonC.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
 
-        JButton botonFactorizacion = new JButton("F");
+        JButton botonFactorizacion = new JButton("BHO");
             botonFactorizacion.setBackground(Color.decode("#EB23D7"));
             botonFactorizacion.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.DARK_GRAY, Color.BLACK));
             botonFactorizacion.setFocusPainted(false); // <-- para que no salga cuadradito rectangular al clicar
@@ -838,7 +838,7 @@ public class Calculator {
 
         JPanel panelLabelFac = new JPanel();
         tercerPanel.add(panelLabelFac);
-        JLabel labelFac = new JLabel("INDICA EL NUMERO A FACTORIZAR");
+        JLabel labelFac = new JLabel("INDICA EL NUMERO A CONVERSAR");
         panelLabelFac.add(labelFac);
         panelLabelFac.setBackground(Color.decode("#A069E0"));
 
@@ -853,7 +853,7 @@ public class Calculator {
 
 
 
-        JButton botonFac = new JButton("CALCULAR FACTORIZACION");
+        JButton botonFac = new JButton("CALCULAR CONVERSION");
         tercerPanel.add(botonFac);
         botonFac.setBackground(Color.decode("#04E0DD"));
         botonFac.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.DARK_GRAY, Color.BLACK));
@@ -880,6 +880,8 @@ public class Calculator {
 
 
 
+    //      CODIGO PARA REALIZAR UNA OPERACION DE FACTORIZACION     //
+/*
 
         botonFac.addActionListener(new ActionListener() {
             @Override
@@ -933,7 +935,62 @@ public class Calculator {
             }
         });
 
+*/
 
+
+
+
+        botonFac.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+
+                int numeroUser = Integer.parseInt(jTextFieldFac.getText());
+
+
+                if (numeroUser == 0) {
+                    System.out.println("El número binario es: 0");
+                } else {
+                    String binary = "";
+                    String octal = "";
+                    String hex = "";
+                    int num = numeroUser;
+
+                    while (num > 0) {
+                        int remainder = num % 2;
+                        binary = remainder + binary;
+                        num /= 2;
+                    }
+
+                    num = numeroUser;
+
+                    while (num > 0) {
+                        int remainder = num % 8;
+                        octal = remainder + octal;
+                        num /= 8;
+                    }
+
+                    num = numeroUser;
+
+                    while (num > 0) {
+                        int remainder = num % 16;
+                        if (remainder < 10) {
+                            hex = remainder + hex;
+                        } else {
+                            char hexDigit = (char) ('A' + (remainder - 10));
+                            hex = hexDigit + hex;
+                        }
+                        num /= 16;
+                    }
+
+
+                    taResultadoFact.setText("El numero "+numeroUser+"\n"+
+                                            "En binario es "+binary+"\n"+
+                                            "En hexadecimal es "+hex+"\n"+
+                                            "En octal es "+octal);
+                }
+            }
+        });
 
 
 
@@ -999,7 +1056,7 @@ public class Calculator {
 
 
 
-                // Muestra la segunda ventana
+                // Muestra la ventana estelar
                 stelarFrame.setUndecorated(true);
                 stelarFrame.setVisible(true);
                 stelarFrame.setResizable(false);
