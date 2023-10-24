@@ -1,5 +1,8 @@
 package ProyectoCalculadora;
 
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
@@ -480,6 +483,7 @@ public class Calculator {
             }
         });
 
+
         // accion boton Reset
         botonReset.addActionListener(new ActionListener() {
             @Override
@@ -487,6 +491,20 @@ public class Calculator {
                 textResult.setText("");
             }
         });
+        botonReset.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                botonReset.setBackground(Color.decode("#E0D5E8"));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                botonReset.setBackground(Color.decode("#D4AAEA"));
+            }
+        });
+
+
+
 
 
         // ACCIONES PARA LOS OPERANDOS Y EL IGUAL
@@ -541,6 +559,8 @@ public class Calculator {
         botonIgual.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
+
                 double numero2 = Double.parseDouble(textResult.getText());
 
                 switch (operador) {
@@ -566,7 +586,10 @@ public class Calculator {
 
                     default:
                         textResult.setText("ERROR");
+
                 }
+
+
 
 
                 // otra manera de hacer las operaciones con elses
@@ -816,6 +839,7 @@ public class Calculator {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.getContentPane().remove(tercerPanel);
+                frame.getContentPane().remove(secondPanel);
                 frame.getContentPane().add(panelPrincipal);
                 frame.revalidate();
                 frame.repaint();
