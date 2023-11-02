@@ -12,8 +12,9 @@ public class Persona {
 
 
 
-    public Persona(String nombre, String apellidos, String DNI, String email, String contraseña) {
+    public Persona(int id, String nombre, String apellidos, String DNI, String email, String contraseña) {
 
+        this.ID = id;
         this.Nombre =  nombre;
         this.Apellidos = apellidos;
         this.DNI = DNI;
@@ -69,6 +70,7 @@ public class Persona {
     public void setContraseña(String contraseña) {
         Contraseña = contraseña;
     }
+
 
 
 }
