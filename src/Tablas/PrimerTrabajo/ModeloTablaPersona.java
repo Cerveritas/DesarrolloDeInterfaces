@@ -2,7 +2,10 @@ package Tablas.PrimerTrabajo;
 
 import Tablas.StudentTableModel;
 
+import javax.swing.*;
 import javax.swing.table.AbstractTableModel;
+import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.util.List;
 
 public class ModeloTablaPersona extends AbstractTableModel {
@@ -25,7 +28,7 @@ public class ModeloTablaPersona extends AbstractTableModel {
     }
 
 
-    private List<Persona> personas;
+    private static List<Persona> personas;
 
     public ModeloTablaPersona(List<Persona> personas){
         super();
@@ -46,6 +49,14 @@ public class ModeloTablaPersona extends AbstractTableModel {
     public String getColumnName (int column){
         return ModeloTablaPersona.ColumnasTablaPersona.values()[column].header;
     }
+
+
+    public void agregarPersona(Persona persona) {
+        personas.add(persona);
+        fireTableDataChanged();
+    }
+
+
 
 
     @Override
@@ -77,11 +88,4 @@ public class ModeloTablaPersona extends AbstractTableModel {
 
         }
     }
-
-
-
-
-
-
-
 }

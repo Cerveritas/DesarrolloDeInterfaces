@@ -11,17 +11,16 @@ public class Persona {
     private String Contraseña;
 
 
-    public  Persona(){};
 
+    public Persona(String nombre, String apellidos, String DNI, String email, String contraseña) {
 
-    public Persona(int ID, String nombre, String apellidos, String DNI, String email, String contraseña) {
-        this.ID = ID;
-        Nombre = nombre;
-        Apellidos = apellidos;
+        this.Nombre =  nombre;
+        this.Apellidos = apellidos;
         this.DNI = DNI;
-        Email = email;
-        Contraseña = contraseña;
+        this.Email = email;
+        this.Contraseña = contraseña;
     }
+
 
     public int getID() {
         return ID;
@@ -70,4 +69,8 @@ public class Persona {
     public void setContraseña(String contraseña) {
         Contraseña = contraseña;
     }
+
+
 }
+
+  
