@@ -7,6 +7,8 @@ import javax.swing.border.BevelBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 public class Main {
@@ -34,6 +36,8 @@ public class Main {
 
 
         JTable tablaPrincipal = new JTable(new ModeloTablaPersona(personas));
+        tablaPrincipal.setBackground(Color.decode("#F7D4FF"));
+
         actualizarTabla(tablaPrincipal, personas);
 
         tablaPrincipal.setPreferredScrollableViewportSize(new Dimension(700, 500));
@@ -44,11 +48,13 @@ public class Main {
         // ZONA DE BOTONES, LABELS, TEXTFIELD //
 
 
-        JLabel tituloL = new JLabel("BASE DE USUARIOS");
-            panelSecundario.add(tituloL, new GridBagConstraints(0, 0, 0, 1, 1.0, 0.10, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(10, 0, 10, 0), 20, 10));
+        JButton tituloL = new JButton("------- BASE DE USUARIOS -------");
+            panelSecundario.add(tituloL, new GridBagConstraints(0, 0, 0, 1, 1.0, 0.10, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(10, 4, 10, 5), 20, 10));
             tituloL.setBorder(new BevelBorder(1));
+            tituloL.setBackground(Color.decode("#D1D1D1" +
+                    ""));;
             tituloL.setHorizontalAlignment(JLabel.CENTER);
-                Font font = new Font("Arial", Font.PLAIN, 10);
+                Font font = new Font("Arial", Font.PLAIN, 15);
                     tituloL.setFont(font);
 
 
@@ -106,13 +112,16 @@ public class Main {
         panelMain.add(panelSecundario);
         panelMain.add(panelPrincipal);
 
-        frame.setBounds(500, 150, 800, 700);
+        frame.setBounds(520, 150, 800, 700);
+        frame.setUndecorated(true);
         frame.setVisible(true);
+        frame.setResizable(false);
+
 
 
 
 /********************************************************************************************************************************************************************************************************************/
-/********************************************************************************************************************************************************************************************************************/
+/*********************************************************************************************************************************************************************************************/
 /************************************  ACCIONES DE LOS BOTONES  *****************************************************************************************************************************************************/
 
 
@@ -124,6 +133,15 @@ public class Main {
         textDNI.setEditable(false);
         textEMAIL.setEditable(false);
         textCONTRASEÑA.setEditable(false);
+
+
+        //BOTON PARA SALIR DEL PROGRAMA
+        tituloL.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
 
 
 
@@ -142,6 +160,10 @@ public class Main {
                 textDNI.setEditable(true);
                 textEMAIL.setEditable(true);
                 textCONTRASEÑA.setEditable(true);
+
+                botonNuevo.setEnabled(false);
+                botonModificar.setEnabled(false);
+                botonEliminar.setEnabled(false);
 
             }
         });
@@ -195,6 +217,10 @@ public class Main {
                     textEMAIL.setEditable(false);
                     textCONTRASEÑA.setEditable(false);
 
+                    botonNuevo.setEnabled(true);
+                    botonModificar.setEnabled(true);
+                    botonEliminar.setEnabled(true);
+
 
             }
         });
@@ -225,7 +251,22 @@ public class Main {
         botonModificar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(frame, "BOTON EN MANTENIMIENTO, LISTO PARA PROXIMAS ACTUALIZACIONES");
+
+                Persona usuario = personas.get(tablaPrincipal.getSelectedRow());
+                personas.remove(tablaPrincipal.getSelectedRow());
+
+                usuario.setID(Integer.parseInt(textID.getText()));
+                usuario.setNombre(textNOMBRE.getText());
+                usuario.setApellidos(textAPELLIDOS.getText());
+                usuario.setDNI(textDNI.getText());
+                usuario.setEmail(textEMAIL.getText());
+                usuario.setContraseña(textCONTRASEÑA.getText());
+
+                personas.add(usuario);
+                actualizarTabla(tablaPrincipal, personas);
+                tablaPrincipal.revalidate();
+                tablaPrincipal.repaint();
+
 
             }
         });
