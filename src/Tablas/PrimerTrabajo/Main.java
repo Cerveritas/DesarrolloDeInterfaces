@@ -180,46 +180,45 @@ public class Main {
             public void actionPerformed(ActionEvent e) {
 
 
-                    // Obtiene los valores de los campos del formulario
-                    int id = Integer.parseInt(textID.getText());
-                    String nombre = textNOMBRE.getText();
-                    String apellidos = textAPELLIDOS.getText();
-                    String dni = textDNI.getText();
-                    String email = textEMAIL.getText();
-                    String contraseña = textCONTRASEÑA.getText();
+                // Obtiene los valores de los campos del formulario
+                int id = Integer.parseInt(textID.getText());
+                String nombre = textNOMBRE.getText();
+                String apellidos = textAPELLIDOS.getText();
+                String dni = textDNI.getText();
+                String email = textEMAIL.getText();
+                String contraseña = textCONTRASEÑA.getText();
 
-                    actualizarTabla(tablaPrincipal, personas);
-
-
-
-                    // Crea una nueva persona con los valores de los parámetros
-                    Persona persona = new Persona(id, nombre, apellidos, dni, email, contraseña);
-
-                    // Agrega la nueva persona a la tabla
-                    modeloTablaPersona.agregarPersona(persona);
-
-                    // Mensaje de aceptacion
-                    JOptionPane.showMessageDialog(frame, "Persona agregada con éxito");
+                actualizarTabla(tablaPrincipal, personas);
 
 
-                    // Limpia los campos del formulario
-                    textID.setText("");
-                    textNOMBRE.setText("");
-                    textAPELLIDOS.setText("");
-                    textDNI.setText("");
-                    textEMAIL.setText("");
-                    textCONTRASEÑA.setText("");
+                // Crea una nueva persona con los valores de los parámetros
+                Persona persona = new Persona(id, nombre, apellidos, dni, email, contraseña);
 
-                    // Manda a false la editablidad los campos
-                    textNOMBRE.setEditable(false);
-                    textAPELLIDOS.setEditable(false);
-                    textDNI.setEditable(false);
-                    textEMAIL.setEditable(false);
-                    textCONTRASEÑA.setEditable(false);
+                // Agrega la nueva persona a la tabla
+                modeloTablaPersona.agregarPersona(persona);
 
-                    botonNuevo.setEnabled(true);
-                    botonModificar.setEnabled(true);
-                    botonEliminar.setEnabled(true);
+                // Mensaje de aceptacion
+                JOptionPane.showMessageDialog(frame, "Persona agregada con éxito");
+
+
+                // Limpia los campos del formulario
+                textID.setText("");
+                textNOMBRE.setText("");
+                textAPELLIDOS.setText("");
+                textDNI.setText("");
+                textEMAIL.setText("");
+                textCONTRASEÑA.setText("");
+
+                // Manda a false la editablidad los campos
+                textNOMBRE.setEditable(false);
+                textAPELLIDOS.setEditable(false);
+                textDNI.setEditable(false);
+                textEMAIL.setEditable(false);
+                textCONTRASEÑA.setEditable(false);
+
+                botonNuevo.setEnabled(true);
+                botonModificar.setEnabled(true);
+                botonEliminar.setEnabled(true);
 
 
             }
