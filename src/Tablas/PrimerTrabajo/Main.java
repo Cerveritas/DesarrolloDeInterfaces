@@ -269,14 +269,6 @@ public class Main {
 
             }
         });
-
-
-
-
-
-
-
-
     } // <-- cierre del main
 
     private static int obtenerID (ArrayList<Persona> personas) {
