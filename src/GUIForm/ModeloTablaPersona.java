@@ -1,17 +1,17 @@
-package Tablas.PrimerTrabajo;
 
-import Tablas.StudentTableModel;
+package GUIForm;
 
-import javax.swing.*;
+
+
 import javax.swing.table.AbstractTableModel;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.util.HashMap;
 import java.util.List;
 
 public class ModeloTablaPersona extends AbstractTableModel {
 
-
+    public void agregarPersona(Persona persona) {
+        personas.add(persona);
+        fireTableDataChanged();
+    }
 
     private enum ColumnasTablaPersona {
 
@@ -37,6 +37,7 @@ public class ModeloTablaPersona extends AbstractTableModel {
         this.personas = personas;
     }
 
+
     @Override
     public int getRowCount() {
         return personas.size();
@@ -46,26 +47,18 @@ public class ModeloTablaPersona extends AbstractTableModel {
     public int getColumnCount() {
         return ColumnasTablaPersona.values().length;
     }
-
     @Override
     public String getColumnName (int column){
-        return ModeloTablaPersona.ColumnasTablaPersona.values()[column].header;
+       return ColumnasTablaPersona.values()[column].header;
     }
-
-
-    public void agregarPersona(Persona persona) {
-        personas.add(persona);
-        fireTableDataChanged();
-    }
-
-
+    
 
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         Persona persona = personas.get(rowIndex);
 
-        switch (ColumnasTablaPersona.values()[columnIndex]){
+        switch (ModeloTablaPersona.ColumnasTablaPersona.values()[columnIndex]){
 
             case ID:
                 return persona.getID();
@@ -90,4 +83,6 @@ public class ModeloTablaPersona extends AbstractTableModel {
 
         }
     }
+
+
 }
