@@ -8,6 +8,9 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
+import javax.swing.event.DocumentListener;
+import javax.swing.event.UndoableEditListener;
+import javax.swing.text.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.ImageObserver;
@@ -18,6 +21,7 @@ public class Calculator {
 
     public static double numero1;
     public static String operador = "";
+    private String text;
 
 
     public static void main(String[] args) {
@@ -26,6 +30,12 @@ public class Calculator {
         JFrame frame = new JFrame("CALCULATOR");
         frame.setBounds(800, 200, 320, 450); // Tamaño
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Para la finalizacion del programa
+
+
+
+
+
+
 
 
         JTextField textResult = new JTextField("0");
@@ -55,6 +65,29 @@ public class Calculator {
 
 
 /********************************************************************************************************************************************************************************************************************/
+        // CANCELAR TEXT FILD ESCRIBIR
+
+        textResult.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                if (!Character.isDigit(e.getKeyChar())){
+                    e.consume();
+                }
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+
+            }
+        });
+/********************************************************************************************************************************************************************************************************************/
+
+
 
         // OPCIONES UNICAMENTE DE BOTONES ESPECIALES PARA SALIR Y MINIMIZAR
 
