@@ -20,6 +20,10 @@ public class Persona {
         this.Contraseña = contraseña;
     }
 
+    public Persona() {
+
+    }
+
 
     public int getID() {
         return ID;

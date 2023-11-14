@@ -7,18 +7,23 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.*;
 import java.util.ArrayList;
+import java.util.Scanner;
+
 
 public class EjercicioFormulario {
 
 
+    static Connection conn;
+    static Scanner sc;
 
     public EjercicioFormulario() {
 
 
 
         textID.setEditable(false);//opcion super importante para no poder escribir en el campo ID
-        Persona p1 = new Persona(1, "Prueba", "Estatica", "00000000A", "prueba@gmail.com", "xxxxxx");
+        Persona p1 = new Persona(1, "LoDelPincipio.Prueba", "Estatica", "00000000A", "prueba@gmail.com", "xxxxxx");
         Persona p2 = new Persona(2, "dfd", "ef", "fsdff", "dfsf", "ewfef");
 
         ArrayList<Persona> personas = new ArrayList<>();
@@ -119,6 +124,12 @@ public class EjercicioFormulario {
                     textEMAIL.setText("");
                     textCONTRASEÑA.setText("");
                     JOptionPane.showMessageDialog(table1, "Usuario eliminado correctamente...");
+/*
+                    try {
+                        eliminarRegistro();
+                    } catch (SQLException throwables) {
+                        throwables.printStackTrace();
+                    }*/
                 }
 
             }
@@ -137,6 +148,12 @@ public class EjercicioFormulario {
                 String email = textEMAIL.getText();
                 String contraseña = textCONTRASEÑA.getText();
 
+                try {
+                    insertarNuevoRegistro();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+
                 actualizarTabla(table1, personas);
 
 
@@ -148,6 +165,9 @@ public class EjercicioFormulario {
 
                 // Mensaje de aceptacion
                 JOptionPane.showMessageDialog(panel1, "Persona agregada con éxito");
+
+
+
 
 
                 // Limpia los campos del formulario
@@ -173,7 +193,9 @@ public class EjercicioFormulario {
         });
     }
 
-    public static void main(String[] args) {
+
+    //MAIN
+    public static void main(String[] args) throws SQLException {
         JFrame frame = new JFrame("EjercicioFormulario");
         frame.setContentPane(new EjercicioFormulario().panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -184,12 +206,13 @@ public class EjercicioFormulario {
 
 
 
-        Persona p1 = new Persona(1, "Prueba", "Estatica", "00000000A", "prueba@gmail.com", "xxxxxx");
+        Persona p1 = new Persona(1, "LoDelPincipio.Prueba", "Estatica", "00000000A", "prueba@gmail.com", "xxxxxx");
         Persona p2 = new Persona(2, "dfd", "ef", "fsdff", "dfsf", "ewfef");
 
         ArrayList<Persona> personas = new ArrayList<Persona>();
         personas.add(p1);
         personas.add(p2);
+
 
 
 
@@ -200,7 +223,11 @@ public class EjercicioFormulario {
         JScrollPane scrollPane = new JScrollPane(new EjercicioFormulario().table1);
 
 
+
+insertarNuevoRegistro();
     }
+
+
 
     private static void actualizarTabla(JTable tablaPrincipal, ArrayList<Persona> personas) {
         tablaPrincipal.setModel(new GUIForm.ModeloTablaPersona(personas));
@@ -226,6 +253,75 @@ public class EjercicioFormulario {
     private JLabel labelDNI;
     private JLabel labelEMAIL;
     private JLabel labelCONTRASEÑA;
+
+
+
+
+    // ESTABLECER CONEXION CON EL SGBD
+    public static void establecerConexion() throws SQLException {
+
+        String url = "jdbc:mysql://localhost:3306/";
+        String user = "root";
+        String pwd = "admin";
+
+        conn = DriverManager.getConnection(url, user, pwd);
+
+    }
+    public static void asignar() throws SQLException {
+        String query = "use mydb";
+        Statement st = conn.createStatement();
+        st.executeUpdate(query);
+    }
+
+
+
+
+    // METODO 5 -> Insertar nuevo registro
+    public static void insertarNuevoRegistro() throws SQLException {
+        establecerConexion();
+        asignar();
+
+        PreparedStatement ps = conn.prepareStatement("insert into users values (?,?,?,?,?,?)");
+
+
+        Persona persona = new Persona();
+
+        ps.setInt(1, Integer.parseInt(String.valueOf(persona.getID())));
+        ps.setString(2, persona.getNombre());
+        ps.setString(3, persona.getApellidos());
+        ps.setString(4, persona.getDNI());
+        ps.setString(5, persona.getEmail());
+        ps.setString(6, persona.getContraseña());
+
+        ps.executeUpdate();
+
+        System.out.println("El registro fue insertado correctamente...");
+    }
+/*
+    // METODO 6 -> Eliminar registro segun DNI
+    public static void eliminarRegistro() throws SQLException {
+        establecerConexion();
+        asignar();
+
+        Persona persona = new Persona();
+
+        PreparedStatement ps = conn.prepareStatement("delete from paciente where id=?");
+
+
+
+        ps.setString(1, String.valueOf(persona.getID()));
+
+        ps.executeUpdate();
+
+    }
+
+*/
+
+
+
+
+
+
 
 
 }

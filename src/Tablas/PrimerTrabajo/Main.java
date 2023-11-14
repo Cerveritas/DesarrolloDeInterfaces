@@ -27,7 +27,7 @@ public class Main {
             panelSecundario.setBackground(Color.decode("#C7C7C7"));
 
 
-        Persona p1 = new Persona(1, "Prueba", "Estatica", "00000000A", "prueba@gmail.com", "xxxxxx");
+        Persona p1 = new Persona(1, "LoDelPincipio.Prueba", "Estatica", "00000000A", "prueba@gmail.com", "xxxxxx");
         Persona p2 = new Persona(2, "dfd", "ef", "fsdff", "dfsf", "ewfef");
 
         ArrayList<Persona> personas = new ArrayList<Persona>();

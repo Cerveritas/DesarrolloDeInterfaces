@@ -1,3 +1,5 @@
+package LoDelPincipio;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -11,7 +13,7 @@ public class MoveOptionsWindowsCasa {
 
         // CONSTRUCCION DEL FRAME Y DEL PANEL
 
-        JFrame frame = new JFrame("MoveOptionsWindowsCasa");
+        JFrame frame = new JFrame("LoDelPincipio.MoveOptionsWindowsCasa");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setBounds(700, 350, 500, 225);
 
