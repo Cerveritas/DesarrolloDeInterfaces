@@ -1,4 +1,4 @@
-package ConexionesConBBDD.Pruebas;
+package ConexionesConBBDD;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
