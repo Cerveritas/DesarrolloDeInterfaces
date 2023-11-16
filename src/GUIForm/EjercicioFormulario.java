@@ -5,6 +5,7 @@ package GUIForm;
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,7 +20,7 @@ public class EjercicioFormulario {
     static Connection conn;
     static Scanner sc;
 
-    public EjercicioFormulario() {
+    public EjercicioFormulario() throws SQLException {
 
 
 
@@ -29,6 +30,10 @@ public class EjercicioFormulario {
 
 
         table1.setModel(new ModeloTablaPersona(personas));
+
+
+
+
 
 
 
@@ -122,6 +127,15 @@ public class EjercicioFormulario {
                 //table1.repaint();
 
 
+
+                // Limpia los campos del formulario
+                textID.setText("");
+                textNOMBRE.setText("");
+                textAPELLIDOS.setText("");
+                textDNI.setText("");
+                textEMAIL.setText("");
+                textCONTRASEÑA.setText("");
+
             }
         });
 
@@ -154,6 +168,11 @@ public class EjercicioFormulario {
                     textEMAIL.setText("");
                     textCONTRASEÑA.setText("");
                     JOptionPane.showMessageDialog(table1, "Usuario eliminado correctamente...");
+
+                    botonAñadir.setEnabled(true);
+                    botonNuevo.setEnabled(true);
+                    botonModificar.setEnabled(true);
+                    botonEliminar.setEnabled(true);
 
                 }
 
@@ -269,7 +288,11 @@ public class EjercicioFormulario {
 
             }
         });
+
+
+
     }
+
 
 
     //MAIN
@@ -336,15 +359,16 @@ public class EjercicioFormulario {
     private JLabel labelCONTRASEÑA;
 
 
-
-
-
     // ESTABLECER CONEXION CON EL SGBD
     public static void establecerConexion() throws SQLException {
 
+        // BBDD INSTITUTO
         String url = "jdbc:mysql://localhost:3306/";
         String user = "root";
         String pwd = "admin";
+
+
+        System.out.println("CONEXION ESTABLECIDA");
 
         conn = DriverManager.getConnection(url, user, pwd);
 
@@ -357,6 +381,8 @@ public class EjercicioFormulario {
        // LimpiarBBDD();
 
     }
+
+
 
 
 
