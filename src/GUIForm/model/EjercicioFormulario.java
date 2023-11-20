@@ -1,11 +1,12 @@
-package GUIForm;
+package GUIForm.model;
 
 
+
+import GUIForm.controller.Persona;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -331,7 +332,7 @@ public class EjercicioFormulario {
 
 
     private static void actualizarTabla(JTable tablaPrincipal, ArrayList<Persona> personas) {
-        tablaPrincipal.setModel(new GUIForm.ModeloTablaPersona(personas));
+        tablaPrincipal.setModel(new ModeloTablaPersona(personas));
         tablaPrincipal.getColumnModel().getColumn(0).setPreferredWidth(0);
 
     }

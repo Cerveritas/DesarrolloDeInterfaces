@@ -1,7 +1,9 @@
 
-package GUIForm;
+package GUIForm.model;
 
 
+
+import GUIForm.controller.Persona;
 
 import javax.swing.table.AbstractTableModel;
 import java.util.List;

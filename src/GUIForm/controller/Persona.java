@@ -1,4 +1,4 @@
-package GUIForm;
+package GUIForm.controller;
 
 public class Persona {
     private int ID;
