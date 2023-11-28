@@ -4,13 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.Serializable;
 
-
-
-public class JButtonImagen extends JButton implements Serializable {
+public class JButtonImagen2 extends JButton implements Serializable {
 
     private String rutaimagen;
 
-    public JButtonImagen() {
+    public JButtonImagen2() {
         super();
         initialize();
     }
@@ -28,5 +26,6 @@ public class JButtonImagen extends JButton implements Serializable {
     public void setRutaimagen(String rutaimagen) {
         this.rutaimagen = rutaimagen;
     }
-}
 
+
+}
