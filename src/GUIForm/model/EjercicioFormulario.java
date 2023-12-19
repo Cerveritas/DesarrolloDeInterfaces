@@ -7,6 +7,8 @@ import GUIForm.controller.Persona;
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,6 +27,7 @@ public class EjercicioFormulario {
 
 
 
+
         textID.setEditable(false);//opcion super importante para no poder escribir en el campo ID
 
         ArrayList<Persona> personas = new ArrayList<>();
@@ -33,6 +36,9 @@ public class EjercicioFormulario {
         table1.setModel(new ModeloTablaPersona(personas));
 
 
+
+        TableRowSorter<ModeloTablaPersona> sorter = new TableRowSorter<>(new ModeloTablaPersona(personas));
+        table1.setRowSorter(sorter);
 
 
 
@@ -67,6 +73,7 @@ public class EjercicioFormulario {
                 botonNuevo.setEnabled(false);
                 botonModificar.setEnabled(false);
                 botonEliminar.setEnabled(false);
+
 
             }
 
@@ -290,8 +297,6 @@ public class EjercicioFormulario {
             }
         });
 
-
-
     }
 
 
@@ -319,6 +324,7 @@ public class EjercicioFormulario {
 
         new EjercicioFormulario().table1.setPreferredScrollableViewportSize(new Dimension(700, 500));
         JScrollPane scrollPane = new JScrollPane(new EjercicioFormulario().table1);
+
 
 
 
