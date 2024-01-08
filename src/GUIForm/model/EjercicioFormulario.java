@@ -3,6 +3,7 @@ package GUIForm.model;
 
 
 import GUIForm.controller.Persona;
+import GUIForm.controller.Propiedades;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -14,6 +15,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Properties;
 import java.util.Scanner;
 
 
@@ -296,8 +298,9 @@ public class EjercicioFormulario {
 
             }
         });
-
     }
+
+
 
 
 
@@ -315,6 +318,9 @@ public class EjercicioFormulario {
 
 
 
+
+
+
         ArrayList<Persona> personas = new ArrayList<Persona>();
 
 
@@ -324,7 +330,6 @@ public class EjercicioFormulario {
 
         new EjercicioFormulario().table1.setPreferredScrollableViewportSize(new Dimension(700, 500));
         JScrollPane scrollPane = new JScrollPane(new EjercicioFormulario().table1);
-
 
 
 
@@ -390,6 +395,36 @@ public class EjercicioFormulario {
     }
 
 
+    ///////////////////////////////////////////     CAMBIOS DE IDIOMA   //////////////////////////////////////////
+
+
+    public void cargarIdioma(String idioma){
+
+        // Creamos una variable de tipo Properties
+        // Y la inicializamos con nuestra clase...
+
+        Properties propiedades = new Propiedades(idioma);
+        // Titulo del frame, Se obtiene el value de la propiedad que tiene como
+        // key "Titulo"
+
+        labelNombre.setText(propiedades.getProperty("labelNombre"));
+        labelApellidos.setText(propiedades.getProperty("Apellido"));
+        labelCONTRASEÑA.setText(propiedades.getProperty("Contraseña"));
+
+
+
+
+    }
+
+
+
+    private void menuEspañolActionPerformed(java.awt.event.ActionEvent evt) {
+        cargarIdioma("spanish");
+    }
+
+    private void menuIngleslActionPerformed(java.awt.event.ActionEvent evt) {
+        cargarIdioma("english");
+    }
 
 
 
