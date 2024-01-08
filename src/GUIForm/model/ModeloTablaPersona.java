@@ -7,8 +7,18 @@ import GUIForm.controller.Persona;
 
 import javax.swing.table.AbstractTableModel;
 import java.util.List;
+import java.util.Properties;
 
 public class ModeloTablaPersona extends AbstractTableModel {
+
+
+
+
+
+
+
+
+
 
     public void agregarPersona(Persona persona) {
         personas.add(persona);
