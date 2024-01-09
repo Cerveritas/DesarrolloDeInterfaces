@@ -5,7 +5,9 @@ import MULTILENGUAGE.Properties.Propiedades;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.Properties;
+import java.util.concurrent.CancellationException;
 
 public class Form {
 
@@ -27,6 +29,37 @@ public class Form {
 
             }
         });
+
+
+
+        // Cambios de idioma en un combobox con un switch
+        comboBox1.addItem("Español");
+        comboBox1.addItem("Ingles");
+
+        comboBox1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+
+                String idiomaSeleccionado = comboBox1.getSelectedItem().toString();
+
+
+                switch (idiomaSeleccionado) {
+                    case "Español":
+                        CargarIdioma("spanish");
+                        break;
+
+                    case "Ingles":
+                        CargarIdioma("english");
+                        break;
+
+                    default:
+                        System.out.println("Fuera de rangos de switch");
+                }
+
+
+            }
+        });
     }
 
 
@@ -36,9 +69,7 @@ public class Form {
     private JButton botonRojoButton;
     private JPanel panelPrincipal;
     private JPanel panel1;
-
-
-
+    private JComboBox comboBox1;
 
 
     public static void main(String[] args) throws Exception {
@@ -72,26 +103,7 @@ public class Form {
         botonRojoButton.setText(propiedades.getProperty("Boton_Rojo"));
 
 
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 

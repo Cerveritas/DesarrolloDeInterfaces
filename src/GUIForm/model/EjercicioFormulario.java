@@ -3,12 +3,11 @@ package GUIForm.model;
 
 
 import GUIForm.controller.Persona;
-import GUIForm.controller.Propiedades;
+import GUIForm.propierties.Propiedades;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -298,6 +297,37 @@ public class EjercicioFormulario {
 
             }
         });
+
+
+        comboBox1.addItem("Español");
+        comboBox1.addItem("Ingles");
+
+
+        // combobox para cambiar idioma con un switch
+        comboBox1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                String idiomaSeleccionado = comboBox1.getSelectedItem().toString();
+
+
+
+
+                switch (idiomaSeleccionado) {
+                    case "Español":
+                        cargarIdioma("spanish");
+                        break;
+
+                    case "Ingles":
+                        cargarIdioma("english");
+                        break;
+
+                    default:
+                        System.out.println("Fuera de rangos de switch");
+                }
+
+            }
+        });
     }
 
 
@@ -369,6 +399,7 @@ public class EjercicioFormulario {
     private JLabel labelDNI;
     private JLabel labelEMAIL;
     private JLabel labelCONTRASEÑA;
+    private JComboBox comboBox1;
 
 
     // ESTABLECER CONEXION CON EL SGBD
@@ -400,31 +431,23 @@ public class EjercicioFormulario {
 
     public void cargarIdioma(String idioma){
 
-        // Creamos una variable de tipo Properties
-        // Y la inicializamos con nuestra clase...
 
         Properties propiedades = new Propiedades(idioma);
-        // Titulo del frame, Se obtiene el value de la propiedad que tiene como
-        // key "Titulo"
 
-        labelNombre.setText(propiedades.getProperty("labelNombre"));
-        labelApellidos.setText(propiedades.getProperty("Apellido"));
-        labelCONTRASEÑA.setText(propiedades.getProperty("Contraseña"));
+        labelNombre.setText(propiedades.getProperty("NOMBRE"));
+        labelApellidos.setText(propiedades.getProperty("APELLIDO"));
+        labelCONTRASEÑA.setText(propiedades.getProperty("CONTRASEÑA"));
+
+        botonAñadir.setText(propiedades.getProperty("AÑADIR"));
+        botonEliminar.setText(propiedades.getProperty("ELIMINAR"));
+        botonModificar.setText(propiedades.getProperty("MODIFICAR"));
+        botonNuevo.setText(propiedades.getProperty("NUEVO"));
 
 
 
 
     }
 
-
-
-    private void menuEspañolActionPerformed(java.awt.event.ActionEvent evt) {
-        cargarIdioma("spanish");
-    }
-
-    private void menuIngleslActionPerformed(java.awt.event.ActionEvent evt) {
-        cargarIdioma("english");
-    }
 
 
 

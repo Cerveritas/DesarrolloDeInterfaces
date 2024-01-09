@@ -1,9 +1,13 @@
-package MULTILENGUAGE.Properties;
+package GUIForm.propierties;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 
 public class Propiedades extends Properties {
+
+
 
     public Propiedades(String idioma){
 
@@ -12,7 +16,7 @@ public class Propiedades extends Properties {
         } else if (idioma.equals("english")) {
             getProperties("english.properties");
         } else {
-            getProperties("spanish.properties");
+            getProperties("english.properties");
         }
     }
 
@@ -23,4 +27,9 @@ public class Propiedades extends Properties {
 
         }
     }
+
+
+
+
+
 }
