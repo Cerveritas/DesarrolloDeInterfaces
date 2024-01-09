@@ -15,6 +15,12 @@ public class Propiedades extends Properties {
             getProperties("spanish.properties");
         } else if (idioma.equals("english")) {
             getProperties("english.properties");
+        } else if (idioma.equals("portugues")) {
+            getProperties("portugues.properties");
+        } else if (idioma.equals("chinoTradicional")) {
+            getProperties("chinoTradicional.properties");
+        } else if (idioma.equals("rumano")) {
+            getProperties("rumano.properties");
         } else {
             getProperties("english.properties");
         }

@@ -301,6 +301,9 @@ public class EjercicioFormulario {
 
         comboBox1.addItem("Español");
         comboBox1.addItem("Ingles");
+        comboBox1.addItem("Portugues");
+        comboBox1.addItem("Chino Tradicional");
+        comboBox1.addItem("Rumano");
 
 
         // combobox para cambiar idioma con un switch
@@ -320,6 +323,18 @@ public class EjercicioFormulario {
 
                     case "Ingles":
                         cargarIdioma("english");
+                        break;
+
+                    case "Portugues":
+                        cargarIdioma("portugues");
+                        break;
+
+                    case "Chino Tradicional":
+                        cargarIdioma("chinoTradicional");
+                        break;
+
+                    case "Rumano":
+                        cargarIdioma("rumano");
                         break;
 
                     default:
