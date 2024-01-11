@@ -74,7 +74,7 @@
               <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="CONTRASEÑA"/>
+              <text resource-bundle="GUIForm/properties2/languages" key="CONTRASEÑA"/>
             </properties>
           </component>
           <component id="b2d3b" class="javax.swing.JLabel" binding="labelEMAIL">
@@ -98,7 +98,7 @@
               <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="APELLIDOS"/>
+              <text resource-bundle="GUIForm/properties2/languages" key="APELLIDO"/>
             </properties>
           </component>
           <component id="f6dfd" class="javax.swing.JLabel" binding="labelNombre">
@@ -106,7 +106,7 @@
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="NOMBRE"/>
+              <text resource-bundle="GUIForm/properties2/languages" key="NOMBRE"/>
             </properties>
           </component>
           <component id="f7420" class="javax.swing.JButton" binding="botonNuevo">
@@ -115,7 +115,7 @@
             </constraints>
             <properties>
               <background color="-4980737"/>
-              <text value="NUEVO"/>
+              <text resource-bundle="GUIForm/properties2/languages" key="NUEVO"/>
             </properties>
           </component>
           <component id="6a846" class="javax.swing.JTextField" binding="textNOMBRE">
@@ -132,7 +132,7 @@
             </constraints>
             <properties>
               <background color="-4980737"/>
-              <text value="ELIMINAR"/>
+              <text resource-bundle="GUIForm/properties2/languages" key="ELIMINAR"/>
             </properties>
           </component>
           <component id="30fd1" class="javax.swing.JButton" binding="botonModificar">
@@ -141,7 +141,7 @@
             </constraints>
             <properties>
               <background color="-4980737"/>
-              <text value="MODIFICAR"/>
+              <text resource-bundle="GUIForm/properties2/languages" key="MODIFICAR"/>
             </properties>
           </component>
           <component id="c6c73" class="javax.swing.JButton" binding="botonAñadir">
@@ -150,7 +150,7 @@
             </constraints>
             <properties>
               <background color="-4980737"/>
-              <text value="AÑADIR"/>
+              <text resource-bundle="GUIForm/properties2/languages" key="AÑADIR"/>
             </properties>
           </component>
           <component id="a4035" class="javax.swing.JPasswordField" binding="textCONTRASEÑA">
