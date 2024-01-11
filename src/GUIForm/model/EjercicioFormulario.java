@@ -449,6 +449,7 @@ public class EjercicioFormulario {
 
         Properties propiedades = new Propiedades(idioma);
 
+        labelID.setText(propiedades.getProperty("ID"));
         labelNombre.setText(propiedades.getProperty("NOMBRE"));
         labelApellidos.setText(propiedades.getProperty("APELLIDO"));
         labelCONTRASEÑA.setText(propiedades.getProperty("CONTRASEÑA"));
