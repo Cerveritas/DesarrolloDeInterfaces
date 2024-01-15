@@ -5,6 +5,7 @@ package GUIForm.model;
 import GUIForm.controller.Persona;
 import GUIForm.propierties.Propiedades;
 
+
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -24,6 +25,8 @@ public class EjercicioFormulario {
     static Connection conn;
     static Scanner sc;
 
+    static ArrayList<Persona> personas = new ArrayList<>();
+
     public EjercicioFormulario() throws SQLException {
 
 
@@ -31,7 +34,7 @@ public class EjercicioFormulario {
 
         textID.setEditable(false);//opcion super importante para no poder escribir en el campo ID
 
-        ArrayList<Persona> personas = new ArrayList<>();
+
 
 
         table1.setModel(new ModeloTablaPersona(personas));
@@ -53,6 +56,7 @@ public class EjercicioFormulario {
         textDNI.setEditable(false);
         textEMAIL.setEditable(false);
         textCONTRASEÑA.setEditable(false);
+
 
 
         //boton nuevo accion
@@ -343,21 +347,68 @@ public class EjercicioFormulario {
 
             }
         });
+
+        // Objeto Persona
+        Persona usuario = personas.get(table1.getSelectedRow());
+
+        VERUSUARIOButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                //NuevaVentana();
+                Frame frame2 = new JFrame();
+                frame2.setBounds(800, 200, 800, 800); // Tamaño de la ventana estelar
+
+                JPanel panel2 = new JPanel();
+                //panel2.setPreferredSize(new Dimension(250, 80));
+                panel2.setBackground(Color.GREEN);
+                frame2.add(panel2);
+                frame2.revalidate();
+                frame2.repaint();
+                frame2.setVisible(true);
+
+
+
+
+
+
+                // Componentes del nuevo FRAME
+                JTextField textFieldIDUserNEW = new JTextField();
+                JButton botonpene = new JButton();
+
+                panel2.add(botonpene);
+                panel2.add(textFieldIDUserNEW);
+
+
+
+                // Recoger los datos de la tabla
+             /*  usuario.setID(Integer.parseInt(textFieldIDUserNEW.getText()));
+                usuario.setNombre(textNOMBRE.getText());
+                usuario.setApellidos(textAPELLIDOS.getText());
+                usuario.setDNI(textDNI.getText());
+                usuario.setEmail(textEMAIL.getText());
+                usuario.setContraseña(textCONTRASEÑA.getText());*/
+
+
+
+
+
+
+            }
+        });
     }
 
 
 
-
-
+    static JFrame frame = new JFrame("EjercicioFormulario");
     //MAIN
     public static void main(String[] args) throws SQLException {
-        JFrame frame = new JFrame("EjercicioFormulario");
+
         frame.setContentPane(new EjercicioFormulario().panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setBounds(500,350,1100,500);
         frame.setVisible(true);
-
 
 
 
@@ -381,6 +432,30 @@ public class EjercicioFormulario {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+    private static void NuevaVentana(){
+
+
+
+
+
+
     }
 
 
@@ -392,6 +467,7 @@ public class EjercicioFormulario {
         tablaPrincipal.getColumnModel().getColumn(0).setPreferredWidth(0);
 
     }
+
 
 
 
@@ -415,6 +491,7 @@ public class EjercicioFormulario {
     private JLabel labelEMAIL;
     private JLabel labelCONTRASEÑA;
     private JComboBox comboBox1;
+    private JButton VERUSUARIOButton;
 
 
     // ESTABLECER CONEXION CON EL SGBD

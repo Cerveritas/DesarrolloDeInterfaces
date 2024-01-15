@@ -28,21 +28,21 @@ public class ModeloTablaPersona extends AbstractTableModel {
 
     private enum ColumnasTablaPersona {
 
-       /* ID("ID"),
+        ID("ID"),
         NOMBRE("NOMBRE"),
         APELLIDOS("APELLIDOS"),
         DNI("DNI"),
         EMAIL("EMAIL"),
         CONTRASEÑA("CONTRASEÑA");
-*/
 
+/*
         ID(ResourceBundle.getBundle("languages").getString("ID")),
         NOMBRE(ResourceBundle.getBundle("languages").getString("NOMBRE")),
         APELLIDOS(ResourceBundle.getBundle("languages").getString("APELLIDOS")),
         DNI(ResourceBundle.getBundle("languages").getString("DNI")),
         EMAIL(ResourceBundle.getBundle("languages").getString("EMAIL")),
         CONTRASEÑA(ResourceBundle.getBundle("languages").getString("CONTRASEÑA"));
-
+*/
 
 
         final String header;
