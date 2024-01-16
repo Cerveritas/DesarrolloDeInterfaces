@@ -367,11 +367,34 @@ public class EjercicioFormulario {
 
                     // Crea un nuevo frame para mostrar los datos del usuario seleccionado
                     JFrame frame2 = new JFrame("Ver Usuario");
-                    frame2.setBounds(500, 350, 500, 500);
+                    frame2.setBounds(500, 350, 450, 375);
 
-                    // Crea un panel para el frame
-                    JPanel panel2 = new JPanel();
-                    panel2.setLayout(new GridLayout(6, 1));
+                    // Crea un panel principal para el frame
+                    JPanel panelPrincipal = new JPanel(new FlowLayout(FlowLayout.CENTER));
+                        panelPrincipal.setBackground(Color.LIGHT_GRAY);
+
+
+                    // Crear un panel para los datos de los usuarios
+                    JPanel panelUser = new JPanel();
+                    panelUser.setLayout(new GridLayout(6, 1));
+                        panelUser.setBackground(Color.LIGHT_GRAY);
+
+
+                    String path = "src/GUIForm/images/vader2.png";
+                    ImageIcon fotoUser = new ImageIcon(path);
+
+                    JLabel labelPhoto = new JLabel();
+                    labelPhoto.setSize(200,500);
+                    labelPhoto.setIcon(fotoUser);
+
+
+                    panelPrincipal.add(labelPhoto);
+
+
+
+
+
+
 
                     // Crea los componentes del panel
                     JLabel labelID = new JLabel("ID:");
@@ -384,6 +407,7 @@ public class EjercicioFormulario {
                     JTextField textID = new JTextField();
                     textID.setEditable(false);
                     textID.setText(String.valueOf(personas.get(seleccionado).getID()));
+                    textID.setPreferredSize(new Dimension(150,10));
 
                     JTextField textNombre = new JTextField();
                     textNombre.setEditable(false);
@@ -405,35 +429,33 @@ public class EjercicioFormulario {
                     textContraseña.setEditable(false);
                     textContraseña.setText(personas.get(seleccionado).getContraseña());
 
-                    String path = "src/GUIForm/images/vader2.png";
-                    ImageIcon fotoUser = new ImageIcon(path);
-
-                    JLabel labelPhoto = new JLabel();
-                    labelPhoto.setSize(200,500);
-                    labelPhoto.setIcon(fotoUser);
-
-
-
-
 
                     // Agrega los componentes al panel
-                    panel2.add(labelID);
-                    panel2.add(textID);
-                    panel2.add(labelNombre);
-                    panel2.add(textNombre);
-                    panel2.add(labelApellidos);
-                    panel2.add(textApellidos);
-                    panel2.add(labelDNI);
-                    panel2.add(textDNI);
-                    panel2.add(labelEmail);
-                    panel2.add(textEmail);
-                    panel2.add(labelContraseña);
-                    panel2.add(textContraseña);
-                    panel2.add(labelPhoto);
+                    panelUser.add(labelID);
+                    panelUser.add(textID);
+                    panelUser.add(labelNombre);
+                    panelUser.add(textNombre);
+                    panelUser.add(labelApellidos);
+                    panelUser.add(textApellidos);
+                    panelUser.add(labelDNI);
+                    panelUser.add(textDNI);
+                    panelUser.add(labelEmail);
+                    panelUser.add(textEmail);
+                    panelUser.add(labelContraseña);
+                    panelUser.add(textContraseña);
 
-                    // Agrega el panel al frame
-                    frame2.add(panel2);
+
+
+
+
+                    // Agregar los paneles
+                    frame2.add(panelPrincipal);
+                    panelPrincipal.add(panelUser);
                     frame2.setVisible(true);
+                    frame2.setResizable(false);
+                } else {
+                    System.out.println("Error, no hay ningun usuario seleccionado...");
+                    JOptionPane.showMessageDialog(panel1, "No hay ninguna persona seleccionada...");
                 }
 
 
@@ -483,30 +505,7 @@ public class EjercicioFormulario {
 
 
 
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-    private static void NuevaVentana(){
-
-
-
-
-
-
-    }
-
 
 
 
