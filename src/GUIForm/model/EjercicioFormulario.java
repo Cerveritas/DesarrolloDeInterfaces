@@ -63,6 +63,8 @@ public class EjercicioFormulario {
         botonNuevo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                botonAñadir.setEnabled(true);
+
                 textID.setText(String.valueOf(obtenerID(personas)));
                 textNOMBRE.setText("");
                 textAPELLIDOS.setText("");
@@ -292,7 +294,7 @@ public class EjercicioFormulario {
                     textCONTRASEÑA.setEditable(true);
 
                     botonAñadir.setEnabled(false);
-                    botonNuevo.setEnabled(false);
+                    botonNuevo.setEnabled(true);
 
                 }
 
@@ -349,45 +351,92 @@ public class EjercicioFormulario {
         });
 
         // Objeto Persona
-        Persona usuario = personas.get(table1.getSelectedRow());
+
+
+
+
+
 
         VERUSUARIOButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                //NuevaVentana();
-                Frame frame2 = new JFrame();
-                frame2.setBounds(800, 200, 800, 800); // Tamaño de la ventana estelar
+                int seleccionado = table1.getSelectedRow();
 
-                JPanel panel2 = new JPanel();
-                //panel2.setPreferredSize(new Dimension(250, 80));
-                panel2.setBackground(Color.GREEN);
-                frame2.add(panel2);
-                frame2.revalidate();
-                frame2.repaint();
-                frame2.setVisible(true);
+                if (seleccionado != -1) {
+
+                    // Crea un nuevo frame para mostrar los datos del usuario seleccionado
+                    JFrame frame2 = new JFrame("Ver Usuario");
+                    frame2.setBounds(500, 350, 500, 500);
+
+                    // Crea un panel para el frame
+                    JPanel panel2 = new JPanel();
+                    panel2.setLayout(new GridLayout(6, 1));
+
+                    // Crea los componentes del panel
+                    JLabel labelID = new JLabel("ID:");
+                    JLabel labelNombre = new JLabel("Nombre:");
+                    JLabel labelApellidos = new JLabel("Apellidos:");
+                    JLabel labelDNI = new JLabel("DNI:");
+                    JLabel labelEmail = new JLabel("Email:");
+                    JLabel labelContraseña = new JLabel("Contraseña:");
+
+                    JTextField textID = new JTextField();
+                    textID.setEditable(false);
+                    textID.setText(String.valueOf(personas.get(seleccionado).getID()));
+
+                    JTextField textNombre = new JTextField();
+                    textNombre.setEditable(false);
+                    textNombre.setText(personas.get(seleccionado).getNombre());
+
+                    JTextField textApellidos = new JTextField();
+                    textApellidos.setEditable(false);
+                    textApellidos.setText(personas.get(seleccionado).getApellidos());
+
+                    JTextField textDNI = new JTextField();
+                    textDNI.setEditable(false);
+                    textDNI.setText(personas.get(seleccionado).getDNI());
+
+                    JTextField textEmail = new JTextField();
+                    textEmail.setEditable(false);
+                    textEmail.setText(personas.get(seleccionado).getEmail());
+
+                    JTextField textContraseña = new JTextField();
+                    textContraseña.setEditable(false);
+                    textContraseña.setText(personas.get(seleccionado).getContraseña());
+
+                    String path = "src/GUIForm/images/vader2.png";
+                    ImageIcon fotoUser = new ImageIcon(path);
+
+                    JLabel labelPhoto = new JLabel();
+                    labelPhoto.setSize(200,500);
+                    labelPhoto.setIcon(fotoUser);
 
 
 
 
 
+                    // Agrega los componentes al panel
+                    panel2.add(labelID);
+                    panel2.add(textID);
+                    panel2.add(labelNombre);
+                    panel2.add(textNombre);
+                    panel2.add(labelApellidos);
+                    panel2.add(textApellidos);
+                    panel2.add(labelDNI);
+                    panel2.add(textDNI);
+                    panel2.add(labelEmail);
+                    panel2.add(textEmail);
+                    panel2.add(labelContraseña);
+                    panel2.add(textContraseña);
+                    panel2.add(labelPhoto);
 
-                // Componentes del nuevo FRAME
-                JTextField textFieldIDUserNEW = new JTextField();
-                JButton botonpene = new JButton();
-
-                panel2.add(botonpene);
-                panel2.add(textFieldIDUserNEW);
+                    // Agrega el panel al frame
+                    frame2.add(panel2);
+                    frame2.setVisible(true);
+                }
 
 
-
-                // Recoger los datos de la tabla
-             /*  usuario.setID(Integer.parseInt(textFieldIDUserNEW.getText()));
-                usuario.setNombre(textNOMBRE.getText());
-                usuario.setApellidos(textAPELLIDOS.getText());
-                usuario.setDNI(textDNI.getText());
-                usuario.setEmail(textEMAIL.getText());
-                usuario.setContraseña(textCONTRASEÑA.getText());*/
 
 
 
