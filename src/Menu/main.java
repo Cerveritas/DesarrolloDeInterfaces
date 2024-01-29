@@ -33,7 +33,35 @@ public class main {
     private JMenuItem menuItemAddtoFavorites;
     private JMenuItem menuItemPowerSaveMode;
     private JMenuItem menuItemExit;
+    private JMenuItem undoInsertComponentMenuItem;
+    private JMenuItem redoMenuItem;
+    private JMenuItem cutMenuItem;
+    private JMenuItem copyMenuItem;
+    private JMenuItem deleteMenuItem;
+    private JMenuItem findMenuItem;
+    private JMenuItem findUsageMenuItem;
+    private JMenuItem selectAllMenuItem;
+    private JMenuItem addCaretsToEndsMenuItem;
+    private JMenuItem extendSelectionMenuItem;
+    private JMenuItem shrinkSelectionMenuItem;
+    private JMenuItem toggleCaseMenuItem;
+    private JMenuItem joinLinesMenuItem;
+    private JMenuItem dupicateLineOrSelectionMenuItem;
+    private JMenuItem fillParagraphMenuItem;
+    private JMenuItem sortLinesMenuItem;
+    private JMenuItem reverseLinesMenuItem;
+    private JMenuItem indetSelectionMenuItem;
+    private JMenuItem unindentLineOrSelectionMenuItem;
+    private JMenuItem convertIndentsMenuItem;
+    private JMenuItem macrosMenuItem;
+    private JMenuItem encondeXMLHMTLSpecialMenuItem;
+    private JMenu helpMenu;
+    private JMenu ll;
 
+    public main() {
+
+        encondeXMLHMTLSpecialMenuItem.setEnabled(false);
+    }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("main");
@@ -41,19 +69,11 @@ public class main {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
-        frame.setBounds(500,350,1100,500);
+        frame.setBounds(500,350,1000,500);
 
 
 
 
 
     }
-
-    public void main(){
-
-        menuItemCloseProject.getAccelerator();
-
-
-    }
-
 }
