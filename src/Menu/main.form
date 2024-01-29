@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Menu.main">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="633" height="400"/>
+    </constraints>
+    <properties>
+      <background color="-13620164"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="14269" binding="menuPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13620164"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="3720a" class="javax.swing.JMenuBar" binding="menuBar" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints/>
+            <properties>
+              <background color="-13620164"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="30f18" class="javax.swing.JMenu" binding="menuFile" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+                <constraints/>
+                <properties>
+                  <background color="-13620164"/>
+                  <foreground color="-330497"/>
+                  <text value="File"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="1f261" class="javax.swing.JMenuItem" binding="menuItemNew">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="New"/>
+                    </properties>
+                  </component>
+                  <component id="731a2" class="javax.swing.JMenuItem" binding="menuItemOpen">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Open..."/>
+                    </properties>
+                  </component>
+                  <component id="ad86" class="javax.swing.JMenuItem" binding="menuItemRecent">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Open Recent"/>
+                    </properties>
+                  </component>
+                  <component id="86ca2" class="javax.swing.JMenuItem" binding="menuItemCloseProject">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Close Project"/>
+                    </properties>
+                  </component>
+                  <component id="92feb" class="javax.swing.JMenuItem" binding="menuItemSettings">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Settings..."/>
+                    </properties>
+                  </component>
+                  <component id="d008c" class="javax.swing.JMenuItem" binding="menuItemProjectStructure">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Project Structure..."/>
+                    </properties>
+                  </component>
+                  <component id="caa04" class="javax.swing.JMenuItem" binding="menuItemFileProperties">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="File Properties"/>
+                    </properties>
+                  </component>
+                  <component id="8c2bc" class="javax.swing.JMenuItem" binding="menuItemManageIDESettings">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Manage IDE Settings"/>
+                    </properties>
+                  </component>
+                  <component id="9c023" class="javax.swing.JMenuItem" binding="menuItemNewProjectsSettings">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="New Projects Settings"/>
+                    </properties>
+                  </component>
+                  <component id="58891" class="javax.swing.JMenuItem" binding="menuItemExport">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Export"/>
+                    </properties>
+                  </component>
+                  <component id="70e6b" class="javax.swing.JMenuItem" binding="menuItemPrint">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Print..."/>
+                    </properties>
+                  </component>
+                  <component id="a3a11" class="javax.swing.JMenuItem" binding="menuItemAddtoFavorites">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Add to Favorites"/>
+                    </properties>
+                  </component>
+                  <component id="9c546" class="javax.swing.JMenuItem" binding="menuItemPowerSaveMode">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Power Save Mode"/>
+                    </properties>
+                  </component>
+                  <component id="37525" class="javax.swing.JMenuItem" binding="menuItemExit">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Exit"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="b25ff" class="javax.swing.JMenu" binding="menuEdit" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+                <constraints/>
+                <properties>
+                  <background color="-13620164"/>
+                  <foreground color="-330497"/>
+                  <text value="Edit"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="e3e48" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="4f8dd" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="ff446" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="c79e9" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="cf63f" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="9b724" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="4701a" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="72b7c" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="4859d" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="b66a3" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="75323" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="de833" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="9582" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="f35c7" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="65aa5" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="196f0" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="e0971" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="4a93d" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="24e2d" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="cc76f" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="7c5f8" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="f3212" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="65bf" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="56910" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="19311" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="fd999" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="bfb8b" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="acd64" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="3edf6" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                </children>
+              </grid>
+              <grid id="367a9" class="javax.swing.JMenu" binding="menuView" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints/>
+                <properties>
+                  <background color="-13620164"/>
+                  <foreground color="-330497"/>
+                  <text value="View"/>
+                </properties>
+                <border type="none"/>
+                <children/>
+              </grid>
+              <grid id="57f27" class="javax.swing.JMenu" binding="manuNavigate" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints/>
+                <properties>
+                  <background color="-13620164"/>
+                  <foreground color="-330497"/>
+                  <text value="Navigate"/>
+                </properties>
+                <border type="none"/>
+                <children/>
+              </grid>
+              <grid id="83149" class="javax.swing.JMenu" binding="menuCode" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints/>
+                <properties>
+                  <background color="-13620164"/>
+                  <foreground color="-330497"/>
+                  <text value="Code"/>
+                </properties>
+                <border type="none"/>
+                <children/>
+              </grid>
+              <grid id="e946a" class="javax.swing.JMenu" binding="menuAnalyze" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints/>
+                <properties>
+                  <background color="-13620164"/>
+                  <foreground color="-330497"/>
+                  <text value="Analyze"/>
+                </properties>
+                <border type="none"/>
+                <children/>
+              </grid>
+              <grid id="3e45a" class="javax.swing.JMenu" binding="manuRefactor" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints/>
+                <properties>
+                  <background color="-13620164"/>
+                  <foreground color="-330497"/>
+                  <text value="Refactor"/>
+                </properties>
+                <border type="none"/>
+                <children/>
+              </grid>
+              <grid id="24579" class="javax.swing.JMenu" binding="menuBuild" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints/>
+                <properties>
+                  <background color="-13620164"/>
+                  <foreground color="-330497"/>
+                  <text value="Build"/>
+                </properties>
+                <border type="none"/>
+                <children/>
+              </grid>
+              <grid id="445a3" class="javax.swing.JMenu" binding="menuRun" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints/>
+                <properties>
+                  <background color="-13620164"/>
+                  <foreground color="-330497"/>
+                  <text value="Run"/>
+                </properties>
+                <border type="none"/>
+                <children/>
+              </grid>
+              <grid id="d7c9" class="javax.swing.JMenu" binding="menuTools" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints/>
+                <properties>
+                  <background color="-13620164"/>
+                  <foreground color="-330497"/>
+                  <text value="Tools"/>
+                </properties>
+                <border type="none"/>
+                <children/>
+              </grid>
+              <grid id="7e169" class="javax.swing.JMenu" binding="manuVCS" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints/>
+                <properties>
+                  <background color="-13620164"/>
+                  <foreground color="-330497"/>
+                  <text value="VCS"/>
+                </properties>
+                <border type="none"/>
+                <children/>
+              </grid>
+              <grid id="f1b29" class="javax.swing.JMenu" binding="menuWindow" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints/>
+                <properties>
+                  <background color="-13620164"/>
+                  <foreground color="-330497"/>
+                  <text value="Window"/>
+                </properties>
+                <border type="none"/>
+                <children/>
+              </grid>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <vspacer id="7299">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+    </children>
+  </grid>
+</form>
