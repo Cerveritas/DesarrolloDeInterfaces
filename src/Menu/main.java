@@ -167,6 +167,104 @@ public class main {
     private JButton buttonLinea;
     private JButton ButtonCuadrado;
     private JButton ButtonX;
+    private JMenuItem stackTraceOrThreadMenuItem;
+    private JMenuItem dataFlowFromHereMenuItem;
+    private JMenuItem dataFlowToHereMenuItem;
+    private JMenuItem cyclicDependenciesMenuItem;
+    private JMenuItem moduleDependenciesMenuItem;
+    private JMenuItem backwarsDependenciesMenuItem;
+    private JMenuItem dependenciesMenuItem;
+    private JMenuItem inferAnnotationsMenuItem;
+    private JMenuItem inferNullityMenuItem;
+    private JMenuItem viewOfflineInspectionResultsMenuItem;
+    private JMenuItem configureCurrentFileAnalysisMenuItem;
+    private JMenuItem runInspectionByNameMenuItem;
+    private JMenuItem sielentCodeCleanupMenuItem;
+    private JMenuItem codeCleanupMenuItem;
+    private JMenuItem inspectCodeMenuItem;
+    private JMenuItem bookmarksMenuItem;
+    private JMenuItem callHierarchyMenuItem;
+    private JMenuItem upTheStackTraceMenuItem;
+    private JMenuItem callHierarchyMenuItem1;
+    private JMenuItem methodHierarchyMenuItem;
+    private JMenuItem typeHierarchyMenuItem;
+    private JMenuItem filePathMenuItem;
+    private JMenuItem fileStructureMenuItem;
+    private JMenuItem relatedSymbolMenuItem;
+    private JMenuItem testMenuItem;
+    private JMenuItem superMethodMenuItem;
+    private JMenuItem typeDeclarationMenuItem;
+    private JMenuItem implementationSMenuItem;
+    private JMenuItem declarationOrUsagesMenuItem;
+    private JMenuItem jumpToNavigationBarMenuItem;
+    private JMenuItem selectInMenuItem;
+    private JMenuItem navigateInFileMenuItem;
+    private JMenuItem nextEditLocationMenuItem;
+    private JMenuItem lastEditLocationMenuItem;
+    private JMenuItem previousHighlightedErrorMenuItem;
+    private JMenuItem nextHighlightedErrorMenuItem;
+    private JMenuItem lineColumnMenuItem;
+    private JMenuItem symbolMenuItem;
+    private JMenuItem fileMenuItem;
+    private JMenuItem classMenuItem;
+    private JMenuItem searchEverywhereMenuItem;
+    private JMenuItem forwardMenuItem;
+    private JMenuItem backMenuItem;
+    private JMenuItem convertJavaFileToMenuItem;
+    private JMenuItem generateModuleInfoDescriptorsMenuItem;
+    private JMenuItem updateCopyrightMenuItem;
+    private JMenuItem moveLineUpMenuItem;
+    private JMenuItem moveLineDownMenuItem;
+    private JMenuItem moveElementRightMenuItem;
+    private JMenuItem moveElementLeftMenuItem;
+    private JMenuItem moveStatementUpMenuItem;
+    private JMenuItem moveStatementDownMenuItem;
+    private JMenuItem rearrangeCodeMenuItem;
+    private JMenuItem optimizeImportsMenuItem;
+    private JMenuItem autoIndentLinesMenuItem;
+    private JMenuItem reformatFileMenuItem;
+    private JMenuItem reformatCodeMenuItem;
+    private JMenuItem commentWithBlockCommentMenuItem;
+    private JMenuItem commentWithLineCommentMenuItem;
+    private JMenuItem foldingMenuItem;
+    private JMenuItem unwrapRemoveMenuItem;
+    private JMenuItem surroundWithMenuItem;
+    private JMenuItem insertLiveTemplateMenuItem;
+    private JMenuItem codeCompletionMenuItem;
+    private JMenuItem generateMenuItem;
+    private JMenuItem delegateMethodsMenuItem;
+    private JMenuItem implementMethodsMenuItem;
+    private JMenuItem overrideMethodsMenuItem;
+    private JMenuItem addRightToLeftMenuItem;
+    private JMenuItem migrateToAndroidXMenuItem;
+    private JMenuItem internationalizeMenuItem;
+    private JMenuItem migrateMenuItem;
+    private JMenuItem generefyMenuItem;
+    private JMenuItem replaceConstructorWithBuilderMenuItem;
+    private JMenuItem replaceConstructorWithFactoryMenuItem;
+    private JMenuItem replaceTempWithQueryMenuItem;
+    private JMenuItem encapsuleFieldsMenuItem;
+    private JMenuItem wrapMethodReturnValueMenuItem;
+    private JMenuItem removeMiddlemanMenuItem;
+    private JMenuItem replaceInheritanceWithDelegationMenuItem;
+    private JMenuItem useInterfaceWherePossibleMenuItem;
+    private JMenuItem pushMemebersDownMenuItem;
+    private JMenuItem pullMembersUpMenuItem;
+    private JMenuItem invertBooleanMenuItem;
+    private JMenuItem fidnAndReplaceCodeMenuItem;
+    private JMenuItem inlineMenuItem;
+    private JMenuItem extractIntroduceMenuItem;
+    private JMenuItem safeDeleteMenuItem;
+    private JMenuItem copyClassMenuItem;
+    private JMenuItem moveMembersMenuItem;
+    private JMenuItem convertToInstanceMethodMenuItem;
+    private JMenuItem makeStaticMenuItem;
+    private JMenuItem typeMigrationMenuItem;
+    private JMenuItem editPropertyValueMenuItem;
+    private JMenuItem changeSignatureMenuItem;
+    private JMenuItem renameFileMenuItem;
+    private JMenuItem renameMenuItem;
+    private JMenuItem refactorThisMenuItem;
 
 
     public static void main(String[] args) {
@@ -259,8 +357,6 @@ public class main {
         });
 
     }
-
-
 
 
 }

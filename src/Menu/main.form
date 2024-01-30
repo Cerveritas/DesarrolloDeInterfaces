@@ -67,6 +67,10 @@
                       <text value="Close Project"/>
                     </properties>
                   </component>
+                  <component id="ac1ec" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
                   <component id="92feb" class="javax.swing.JMenuItem" binding="menuItemSettings">
                     <constraints/>
                     <properties>
@@ -90,6 +94,10 @@
                       <foreground color="-330497"/>
                       <text value="File Properties"/>
                     </properties>
+                  </component>
+                  <component id="f98b8" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
                   </component>
                   <component id="8c2bc" class="javax.swing.JMenuItem" binding="menuItemManageIDESettings">
                     <constraints/>
@@ -115,6 +123,10 @@
                       <text value="Export"/>
                     </properties>
                   </component>
+                  <component id="2b7a5" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
                   <component id="70e6b" class="javax.swing.JMenuItem" binding="menuItemPrint">
                     <constraints/>
                     <properties>
@@ -131,6 +143,10 @@
                       <text value="Add to Favorites"/>
                     </properties>
                   </component>
+                  <component id="f352f" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
                   <component id="9c546" class="javax.swing.JMenuItem" binding="menuItemPowerSaveMode">
                     <constraints/>
                     <properties>
@@ -138,6 +154,10 @@
                       <foreground color="-330497"/>
                       <text value="Power Save Mode"/>
                     </properties>
+                  </component>
+                  <component id="c7e3d" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
                   </component>
                   <component id="37525" class="javax.swing.JMenuItem" binding="menuItemExit">
                     <constraints/>
@@ -552,8 +572,7 @@
                   </component>
                 </children>
               </grid>
-              <grid id="57f27" class="javax.swing.JMenu" binding="manuNavigate" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                <margin top="0" left="0" bottom="0" right="0"/>
+              <grid id="57f27" class="javax.swing.JMenu" binding="manuNavigate" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
                 <constraints/>
                 <properties>
                   <background color="-13620164"/>
@@ -561,10 +580,274 @@
                   <text value="Navigate"/>
                 </properties>
                 <border type="none"/>
-                <children/>
+                <children>
+                  <component id="3e57f" class="javax.swing.JMenuItem" binding="backMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Back"/>
+                    </properties>
+                  </component>
+                  <component id="d64f" class="javax.swing.JMenuItem" binding="forwardMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Forward"/>
+                    </properties>
+                  </component>
+                  <component id="8a778" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="11b73" class="javax.swing.JMenuItem" binding="searchEverywhereMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Search Everywhere"/>
+                    </properties>
+                  </component>
+                  <component id="47427" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="a3daa" class="javax.swing.JMenuItem" binding="classMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Class..."/>
+                    </properties>
+                  </component>
+                  <component id="54996" class="javax.swing.JMenuItem" binding="fileMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="File..."/>
+                    </properties>
+                  </component>
+                  <component id="96fd5" class="javax.swing.JMenuItem" binding="symbolMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Symbol..."/>
+                    </properties>
+                  </component>
+                  <component id="62256" class="javax.swing.JMenuItem" binding="lineColumnMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Line/Column..."/>
+                    </properties>
+                  </component>
+                  <component id="4c877" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="9d986" class="javax.swing.JMenuItem" binding="nextHighlightedErrorMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Next Highlighted Error"/>
+                    </properties>
+                  </component>
+                  <component id="ab4bc" class="javax.swing.JMenuItem" binding="previousHighlightedErrorMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Previous Highlighted Error"/>
+                    </properties>
+                  </component>
+                  <component id="5049d" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="f470b" class="javax.swing.JMenuItem" binding="lastEditLocationMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Last Edit Location"/>
+                    </properties>
+                  </component>
+                  <component id="79f0c" class="javax.swing.JMenuItem" binding="nextEditLocationMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Next Edit Location"/>
+                    </properties>
+                  </component>
+                  <component id="26feb" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="ba8c8" class="javax.swing.JMenuItem" binding="navigateInFileMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Navigate in File"/>
+                    </properties>
+                  </component>
+                  <component id="ca6ac" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="2ea25" class="javax.swing.JMenuItem" binding="selectInMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Select In..."/>
+                    </properties>
+                  </component>
+                  <component id="4436" class="javax.swing.JMenuItem" binding="jumpToNavigationBarMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Jump to Navigation Bar"/>
+                    </properties>
+                  </component>
+                  <component id="c70d6" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="2f967" class="javax.swing.JMenuItem" binding="declarationOrUsagesMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Declaration or Usages"/>
+                    </properties>
+                  </component>
+                  <component id="ecfc1" class="javax.swing.JMenuItem" binding="implementationSMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Implementation(s)"/>
+                    </properties>
+                  </component>
+                  <component id="bff1" class="javax.swing.JMenuItem" binding="typeDeclarationMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Type Declaration"/>
+                    </properties>
+                  </component>
+                  <component id="3b944" class="javax.swing.JMenuItem" binding="superMethodMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Super Method"/>
+                    </properties>
+                  </component>
+                  <component id="70c26" class="javax.swing.JMenuItem" binding="testMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Test"/>
+                    </properties>
+                  </component>
+                  <component id="d75e3" class="javax.swing.JMenuItem" binding="relatedSymbolMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Related Symbol..."/>
+                    </properties>
+                  </component>
+                  <component id="c42c" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="883c7" class="javax.swing.JMenuItem" binding="fileStructureMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="File Structure"/>
+                    </properties>
+                  </component>
+                  <component id="8b919" class="javax.swing.JMenuItem" binding="filePathMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="File Path"/>
+                    </properties>
+                  </component>
+                  <component id="91a41" class="javax.swing.JMenuItem" binding="typeHierarchyMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Type Hierarchy"/>
+                    </properties>
+                  </component>
+                  <component id="e74dc" class="javax.swing.JMenuItem" binding="methodHierarchyMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Method Hierarchy"/>
+                    </properties>
+                  </component>
+                  <component id="36397" class="javax.swing.JMenuItem" binding="callHierarchyMenuItem1">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Call Hierarchy"/>
+                    </properties>
+                  </component>
+                  <component id="fc89e" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="84281" class="javax.swing.JMenuItem" binding="upTheStackTraceMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Up the stack trace"/>
+                    </properties>
+                  </component>
+                  <component id="e85fe" class="javax.swing.JMenuItem" binding="callHierarchyMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Call Hierarchy"/>
+                    </properties>
+                  </component>
+                  <component id="1ec6e" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="556bf" class="javax.swing.JMenuItem" binding="bookmarksMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Bookmarks"/>
+                    </properties>
+                  </component>
+                </children>
               </grid>
-              <grid id="83149" class="javax.swing.JMenu" binding="menuCode" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                <margin top="0" left="0" bottom="0" right="0"/>
+              <grid id="83149" class="javax.swing.JMenu" binding="menuCode" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
                 <constraints/>
                 <properties>
                   <background color="-13620164"/>
@@ -572,10 +855,239 @@
                   <text value="Code"/>
                 </properties>
                 <border type="none"/>
-                <children/>
+                <children>
+                  <component id="2493f" class="javax.swing.JMenuItem" binding="overrideMethodsMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Override Methods..."/>
+                    </properties>
+                  </component>
+                  <component id="71dfb" class="javax.swing.JMenuItem" binding="implementMethodsMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Implement Methods..."/>
+                    </properties>
+                  </component>
+                  <component id="7e954" class="javax.swing.JMenuItem" binding="delegateMethodsMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Delegate Methods..."/>
+                    </properties>
+                  </component>
+                  <component id="25766" class="javax.swing.JMenuItem" binding="generateMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Generate..."/>
+                    </properties>
+                  </component>
+                  <component id="bee9" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="4693b" class="javax.swing.JMenuItem" binding="codeCompletionMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Code Completion"/>
+                    </properties>
+                  </component>
+                  <component id="7245d" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="8f76e" class="javax.swing.JMenuItem" binding="insertLiveTemplateMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Insert Live Template..."/>
+                    </properties>
+                  </component>
+                  <component id="5d9ab" class="javax.swing.JMenuItem" binding="surroundWithMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Surround With..."/>
+                    </properties>
+                  </component>
+                  <component id="65f38" class="javax.swing.JMenuItem" binding="unwrapRemoveMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <selected value="false"/>
+                      <text value="Unwrap/Remove..."/>
+                    </properties>
+                  </component>
+                  <component id="a8c7d" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="c3cb0" class="javax.swing.JMenuItem" binding="foldingMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Folding"/>
+                    </properties>
+                  </component>
+                  <component id="736a" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="b1d07" class="javax.swing.JMenuItem" binding="commentWithLineCommentMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Comment with Line Comment"/>
+                    </properties>
+                  </component>
+                  <component id="20a83" class="javax.swing.JMenuItem" binding="commentWithBlockCommentMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Comment with Block Comment"/>
+                    </properties>
+                  </component>
+                  <component id="76b1e" class="javax.swing.JMenuItem" binding="reformatCodeMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Reformat Code"/>
+                    </properties>
+                  </component>
+                  <component id="ad910" class="javax.swing.JMenuItem" binding="reformatFileMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Reformat File..."/>
+                    </properties>
+                  </component>
+                  <component id="55926" class="javax.swing.JMenuItem" binding="autoIndentLinesMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Auto-Indent Lines"/>
+                    </properties>
+                  </component>
+                  <component id="57bb9" class="javax.swing.JMenuItem" binding="optimizeImportsMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Optimize Imports"/>
+                    </properties>
+                  </component>
+                  <component id="dc231" class="javax.swing.JMenuItem" binding="rearrangeCodeMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Rearrange Code"/>
+                    </properties>
+                  </component>
+                  <component id="7015f" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="80c29" class="javax.swing.JMenuItem" binding="moveStatementDownMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Move Statement Down"/>
+                    </properties>
+                  </component>
+                  <component id="1cdfe" class="javax.swing.JMenuItem" binding="moveStatementUpMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Move Statement Up"/>
+                    </properties>
+                  </component>
+                  <component id="c8304" class="javax.swing.JMenuItem" binding="moveElementLeftMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Move Element Left"/>
+                    </properties>
+                  </component>
+                  <component id="843ba" class="javax.swing.JMenuItem" binding="moveElementRightMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Move Element Right"/>
+                    </properties>
+                  </component>
+                  <component id="cd7f8" class="javax.swing.JMenuItem" binding="moveLineDownMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Move Line Down"/>
+                    </properties>
+                  </component>
+                  <component id="f10be" class="javax.swing.JMenuItem" binding="moveLineUpMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Move Line Up"/>
+                    </properties>
+                  </component>
+                  <component id="6666a" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="1ec48" class="javax.swing.JMenuItem" binding="updateCopyrightMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Update Copyright..."/>
+                    </properties>
+                  </component>
+                  <component id="2edba" class="javax.swing.JMenuItem" binding="generateModuleInfoDescriptorsMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Generate module-info Descriptors"/>
+                    </properties>
+                  </component>
+                  <component id="6762b" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="3cc06" class="javax.swing.JMenuItem" binding="convertJavaFileToMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Convert Java File to Kotlin File"/>
+                    </properties>
+                  </component>
+                </children>
               </grid>
-              <grid id="e946a" class="javax.swing.JMenu" binding="menuAnalyze" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                <margin top="0" left="0" bottom="0" right="0"/>
+              <grid id="e946a" class="javax.swing.JMenu" binding="menuAnalyze" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
                 <constraints/>
                 <properties>
                   <background color="-13620164"/>
@@ -583,10 +1095,142 @@
                   <text value="Analyze"/>
                 </properties>
                 <border type="none"/>
-                <children/>
+                <children>
+                  <component id="2f869" class="javax.swing.JMenuItem" binding="inspectCodeMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Inspect Code..."/>
+                    </properties>
+                  </component>
+                  <component id="c095" class="javax.swing.JMenuItem" binding="codeCleanupMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Code Cleanup..."/>
+                    </properties>
+                  </component>
+                  <component id="c7b02" class="javax.swing.JMenuItem" binding="sielentCodeCleanupMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Sielent Code Cleanup"/>
+                    </properties>
+                  </component>
+                  <component id="5130" class="javax.swing.JMenuItem" binding="runInspectionByNameMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Run Inspection by Name..."/>
+                    </properties>
+                  </component>
+                  <component id="34cba" class="javax.swing.JMenuItem" binding="configureCurrentFileAnalysisMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Configure Current File Analysis..."/>
+                    </properties>
+                  </component>
+                  <component id="31293" class="javax.swing.JMenuItem" binding="viewOfflineInspectionResultsMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="View Offline Inspection Results..."/>
+                    </properties>
+                  </component>
+                  <component id="8356c" class="javax.swing.JMenuItem" binding="inferNullityMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Infer Nullity..."/>
+                    </properties>
+                  </component>
+                  <component id="2c459" class="javax.swing.JMenuItem" binding="inferAnnotationsMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Infer Annotations..."/>
+                    </properties>
+                  </component>
+                  <component id="9822" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="3d1a3" class="javax.swing.JMenuItem" binding="dependenciesMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Dependencies..."/>
+                    </properties>
+                  </component>
+                  <component id="afb08" class="javax.swing.JMenuItem" binding="backwarsDependenciesMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Backwars Dependencies..."/>
+                    </properties>
+                  </component>
+                  <component id="ac8ae" class="javax.swing.JMenuItem" binding="moduleDependenciesMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Module Dependencies..."/>
+                    </properties>
+                  </component>
+                  <component id="cc0e6" class="javax.swing.JMenuItem" binding="cyclicDependenciesMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Cyclic Dependencies..."/>
+                    </properties>
+                  </component>
+                  <component id="f983f" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="61640" class="javax.swing.JMenuItem" binding="dataFlowToHereMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Data Flow to Here..."/>
+                    </properties>
+                  </component>
+                  <component id="25b3c" class="javax.swing.JMenuItem" binding="dataFlowFromHereMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Data Flow from Here..."/>
+                    </properties>
+                  </component>
+                  <component id="41f21" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="88d14" class="javax.swing.JMenuItem" binding="stackTraceOrThreadMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Stack Trace or Thread Dump..."/>
+                    </properties>
+                  </component>
+                </children>
               </grid>
-              <grid id="3e45a" class="javax.swing.JMenu" binding="manuRefactor" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                <margin top="0" left="0" bottom="0" right="0"/>
+              <grid id="3e45a" class="javax.swing.JMenu" binding="manuRefactor" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
                 <constraints/>
                 <properties>
                   <background color="-13620164"/>
@@ -594,7 +1238,272 @@
                   <text value="Refactor"/>
                 </properties>
                 <border type="none"/>
-                <children/>
+                <children>
+                  <component id="8b9b6" class="javax.swing.JMenuItem" binding="refactorThisMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Refactor This..."/>
+                    </properties>
+                  </component>
+                  <component id="6d16" class="javax.swing.JMenuItem" binding="renameMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Rename..."/>
+                    </properties>
+                  </component>
+                  <component id="bd8bc" class="javax.swing.JMenuItem" binding="renameFileMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Rename File..."/>
+                    </properties>
+                  </component>
+                  <component id="2164" class="javax.swing.JMenuItem" binding="changeSignatureMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Change Signature..."/>
+                    </properties>
+                  </component>
+                  <component id="a41a9" class="javax.swing.JMenuItem" binding="editPropertyValueMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Edit Property Value..."/>
+                    </properties>
+                  </component>
+                  <component id="15ad" class="javax.swing.JMenuItem" binding="typeMigrationMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Type Migration..."/>
+                    </properties>
+                  </component>
+                  <component id="eeffd" class="javax.swing.JMenuItem" binding="makeStaticMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Make Static..."/>
+                    </properties>
+                  </component>
+                  <component id="bb0ce" class="javax.swing.JMenuItem" binding="convertToInstanceMethodMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Convert To Instance Method..."/>
+                    </properties>
+                  </component>
+                  <component id="a350d" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="76a1" class="javax.swing.JMenuItem" binding="moveMembersMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Move Members..."/>
+                    </properties>
+                  </component>
+                  <component id="c4bec" class="javax.swing.JMenuItem" binding="copyClassMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Copy Class..."/>
+                    </properties>
+                  </component>
+                  <component id="73857" class="javax.swing.JMenuItem" binding="safeDeleteMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Safe Delete..."/>
+                    </properties>
+                  </component>
+                  <component id="4aa7c" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="f9866" class="javax.swing.JMenuItem" binding="extractIntroduceMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Extract/Introduce"/>
+                    </properties>
+                  </component>
+                  <component id="2fef4" class="javax.swing.JMenuItem" binding="inlineMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Inline..."/>
+                    </properties>
+                  </component>
+                  <component id="dbe34" class="javax.swing.JMenuItem" binding="fidnAndReplaceCodeMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Fidn and Replace Code Duplicates..."/>
+                    </properties>
+                  </component>
+                  <component id="cb8ea" class="javax.swing.JMenuItem" binding="invertBooleanMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Invert Boolean..."/>
+                    </properties>
+                  </component>
+                  <component id="5c7f0" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="cc2c2" class="javax.swing.JMenuItem" binding="pullMembersUpMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Pull Members Up..."/>
+                    </properties>
+                  </component>
+                  <component id="e9b86" class="javax.swing.JMenuItem" binding="pushMemebersDownMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Push Memebers Down..."/>
+                    </properties>
+                  </component>
+                  <component id="1d095" class="javax.swing.JMenuItem" binding="useInterfaceWherePossibleMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Use Interface Where Possible..."/>
+                    </properties>
+                  </component>
+                  <component id="3ee60" class="javax.swing.JMenuItem" binding="replaceInheritanceWithDelegationMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Replace Inheritance with Delegation..."/>
+                    </properties>
+                  </component>
+                  <component id="7c7f0" class="javax.swing.JMenuItem" binding="removeMiddlemanMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Remove Middleman..."/>
+                    </properties>
+                  </component>
+                  <component id="3bab5" class="javax.swing.JMenuItem" binding="wrapMethodReturnValueMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Wrap Method Return Value..."/>
+                    </properties>
+                  </component>
+                  <component id="9e486" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="2456" class="javax.swing.JMenuItem" binding="encapsuleFieldsMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Encapsule Fields..."/>
+                    </properties>
+                  </component>
+                  <component id="b44cb" class="javax.swing.JMenuItem" binding="replaceTempWithQueryMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Replace Temp With Query..."/>
+                    </properties>
+                  </component>
+                  <component id="68a81" class="javax.swing.JMenuItem" binding="replaceConstructorWithFactoryMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Replace Constructor with Factory Method..."/>
+                    </properties>
+                  </component>
+                  <component id="29a94" class="javax.swing.JMenuItem" binding="replaceConstructorWithBuilderMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Replace Constructor with Builder..."/>
+                    </properties>
+                  </component>
+                  <component id="5f402" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="23b33" class="javax.swing.JMenuItem" binding="generefyMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Generefy..."/>
+                    </properties>
+                  </component>
+                  <component id="92adc" class="javax.swing.JMenuItem" binding="migrateMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Migrate..."/>
+                    </properties>
+                  </component>
+                  <component id="5c35" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="f0117" class="javax.swing.JMenuItem" binding="internationalizeMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Internationalize..."/>
+                    </properties>
+                  </component>
+                  <component id="2d1ce" class="javax.swing.JMenuItem" binding="migrateToAndroidXMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Migrate to AndroidX..."/>
+                    </properties>
+                  </component>
+                  <component id="8dcb9" class="javax.swing.JMenuItem" binding="addRightToLeftMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="Add Right-to-Left (RTL) Support..."/>
+                    </properties>
+                  </component>
+                </children>
               </grid>
               <grid id="24579" class="javax.swing.JMenu" binding="menuBuild" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
                 <constraints/>
