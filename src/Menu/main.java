@@ -1,6 +1,7 @@
 package Menu;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -141,10 +142,36 @@ public class main {
     private JMenuItem groovyConsoleMenuItem;
     private JMenuItem kotlinMenuItem;
     private JMenuItem JShellConsoleMenuItem;
+    private JMenuItem aboutMenuItem;
+    private JMenuItem registerPluginsMenuItem;
+    private JMenuItem checkForUpdatesMenuItem;
+    private JMenuItem editCustomVMOptionsMenuItem;
+    private JMenuItem editCustomPropertiesMenuItem;
+    private JMenuItem changeMemorySettingsMenuItem;
+    private JMenuItem diagnosticToolsMenuItem;
+    private JMenuItem deleteLeftoverIDEDirectoriesMenuItem;
+    private JMenuItem collectLogsAndDiagnosticMenuItem;
+    private JMenuItem showLogInExplorerMenuItem;
+    private JMenuItem submitFeedbackMenuItem;
+    private JMenuItem contactSupportMenuItem;
+    private JMenuItem submitABugReportMenuItem;
+    private JMenuItem myProductivityMenuItem;
+    private JMenuItem tipOdTheDayMenuItem;
+    private JMenuItem keyboardShortcutsPDFMenuItem;
+    private JMenuItem intelliJIDEAOnYouTubeMenuItem;
+    private JMenuItem gettingStartedMenuItem;
+    private JMenuItem whatSNewInMenuItem;
+    private JMenuItem learnIDEFeaturesMenuItem;
+    private JMenuItem helpMenuItem;
+    private JMenuItem findActionMenuItem;
+    private JButton buttonLinea;
+    private JButton ButtonCuadrado;
+    private JButton ButtonX;
 
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("main");
+        frame.setUndecorated(true);
         frame.setContentPane(new main().mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
@@ -158,11 +185,49 @@ public class main {
 
 
 
+
+
     // CONSTRUCTOR
     public main() {
 
+
+
         // Opciones desactivadas
         encondeXMLHMTLSpecialMenuItem.setEnabled(false);
+
+        // Funcionalidad de los botones
+
+            /* boton linea */
+            buttonLinea.setBorder(null); // con el setBorder() quitamos el borde al boton
+            buttonLinea.setFocusPainted(false); // con el setFocusPainted() quitamos cualquier marca al hacer click en el boton
+            buttonLinea.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+
+
+                }
+            });
+
+            /* boton cuadrado */
+            ButtonCuadrado.setBorder(null);
+            ButtonCuadrado.setFocusPainted(false);
+            ButtonCuadrado.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+
+
+                }
+            });
+
+            /* boton x */
+            ButtonX.setBorder(null);
+            ButtonX.setFocusPainted(false);
+            ButtonX.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                    System.exit(0);
+                }
+            });
 
         // Funcionamiento para FILE -> EXIT
         menuItemExit.addActionListener(new ActionListener() {
@@ -190,8 +255,11 @@ public class main {
 
 
             }
+
         });
+
     }
+
 
 
 

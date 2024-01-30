@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Menu.main">
-  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="583" height="400"/>
+      <xy x="20" y="20" width="982" height="400"/>
     </constraints>
     <properties>
       <background color="-13620164"/>
@@ -1263,8 +1263,7 @@
                   </component>
                 </children>
               </grid>
-              <grid id="d66ae" class="javax.swing.JMenu" binding="helpMenu" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                <margin top="0" left="0" bottom="0" right="0"/>
+              <grid id="d66ae" class="javax.swing.JMenu" binding="helpMenu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
                 <constraints/>
                 <properties>
                   <background color="-13620164"/>
@@ -1272,7 +1271,216 @@
                   <text value="Help"/>
                 </properties>
                 <border type="none"/>
-                <children/>
+                <children>
+                  <component id="8464d" class="javax.swing.JMenuItem" binding="findActionMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-1"/>
+                      <text value="Find Action..."/>
+                    </properties>
+                  </component>
+                  <component id="9e2da" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="71a7c" class="javax.swing.JMenuItem" binding="helpMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-1"/>
+                      <text value="Help"/>
+                    </properties>
+                  </component>
+                  <component id="db0b8" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="cc4b" class="javax.swing.JMenuItem" binding="learnIDEFeaturesMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-1"/>
+                      <text value="Learn IDE Features"/>
+                    </properties>
+                  </component>
+                  <component id="51fd3" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="28a1c" class="javax.swing.JMenuItem" binding="whatSNewInMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-1"/>
+                      <text value="What´s New in IntelliJ IDEA"/>
+                    </properties>
+                  </component>
+                  <component id="493ef" class="javax.swing.JMenuItem" binding="gettingStartedMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-1"/>
+                      <text value="Getting Started"/>
+                    </properties>
+                  </component>
+                  <component id="ea500" class="javax.swing.JMenuItem" binding="intelliJIDEAOnYouTubeMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-1"/>
+                      <text value="IntelliJ IDEA on YouTube"/>
+                    </properties>
+                  </component>
+                  <component id="acbff" class="javax.swing.JMenuItem" binding="keyboardShortcutsPDFMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-1"/>
+                      <text value="Keyboard Shortcuts PDF"/>
+                    </properties>
+                  </component>
+                  <component id="e1dfc" class="javax.swing.JMenuItem" binding="tipOdTheDayMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-1"/>
+                      <text value="Tip od the Day"/>
+                    </properties>
+                  </component>
+                  <component id="8e26b" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="4820e" class="javax.swing.JMenuItem" binding="myProductivityMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-1"/>
+                      <text value="My Productivity"/>
+                    </properties>
+                  </component>
+                  <component id="8dfd0" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="919d7" class="javax.swing.JMenuItem" binding="contactSupportMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-1"/>
+                      <text value="Contact Support..."/>
+                    </properties>
+                  </component>
+                  <component id="bc4bf" class="javax.swing.JMenuItem" binding="submitABugReportMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-1"/>
+                      <text value="Submit a Bug Report..."/>
+                    </properties>
+                  </component>
+                  <component id="2c51c" class="javax.swing.JMenuItem" binding="submitFeedbackMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-1"/>
+                      <text value="Submit Feedback"/>
+                    </properties>
+                  </component>
+                  <component id="3823f" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="767b6" class="javax.swing.JMenuItem" binding="showLogInExplorerMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-1"/>
+                      <text value="Show Log in Explorer"/>
+                    </properties>
+                  </component>
+                  <component id="13dfa" class="javax.swing.JMenuItem" binding="collectLogsAndDiagnosticMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-1"/>
+                      <text value="Collect Logs and Diagnostic Data"/>
+                    </properties>
+                  </component>
+                  <component id="50fef" class="javax.swing.JMenuItem" binding="deleteLeftoverIDEDirectoriesMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-1"/>
+                      <text value="Delete Leftover IDE Directories..."/>
+                    </properties>
+                  </component>
+                  <component id="c67a7" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="e1d6e" class="javax.swing.JMenuItem" binding="diagnosticToolsMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-1"/>
+                      <text value="Diagnostic Tools"/>
+                    </properties>
+                  </component>
+                  <component id="a00b" class="javax.swing.JMenuItem" binding="changeMemorySettingsMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-1"/>
+                      <text value="Change Memory Settings"/>
+                    </properties>
+                  </component>
+                  <component id="34ca4" class="javax.swing.JMenuItem" binding="editCustomPropertiesMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-1"/>
+                      <text value="Edit Custom Properties..."/>
+                    </properties>
+                  </component>
+                  <component id="8195b" class="javax.swing.JMenuItem" binding="editCustomVMOptionsMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-1"/>
+                      <text value="Edit Custom VM Options..."/>
+                    </properties>
+                  </component>
+                  <component id="2cd4c" class="javax.swing.JSeparator">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                  <component id="697f2" class="javax.swing.JMenuItem" binding="checkForUpdatesMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-1"/>
+                      <text value="Check for Updates..."/>
+                    </properties>
+                  </component>
+                  <component id="bc8a7" class="javax.swing.JMenuItem" binding="registerPluginsMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-1"/>
+                      <text value="Register Plugins..."/>
+                    </properties>
+                  </component>
+                  <component id="71b6" class="javax.swing.JMenuItem" binding="aboutMenuItem">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-1"/>
+                      <text value="About"/>
+                    </properties>
+                  </component>
+                </children>
               </grid>
             </children>
           </grid>
@@ -1283,6 +1491,51 @@
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
+      <grid id="97362" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13620164"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="78baa" class="javax.swing.JButton" binding="buttonLinea">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-13620164"/>
+              <font size="20"/>
+              <foreground color="-10658202"/>
+              <text value="🗕"/>
+            </properties>
+          </component>
+          <component id="127d9" class="javax.swing.JButton" binding="ButtonCuadrado">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-13620164"/>
+              <font size="20"/>
+              <foreground color="-10658202"/>
+              <text value="🗗"/>
+            </properties>
+          </component>
+          <component id="3bc35" class="javax.swing.JButton" binding="ButtonX">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-13620164"/>
+              <font size="20"/>
+              <foreground color="-10658202"/>
+              <text value="🗙"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
     </children>
   </grid>
 </form>
