@@ -265,6 +265,11 @@ public class main {
     private JMenuItem renameFileMenuItem;
     private JMenuItem renameMenuItem;
     private JMenuItem refactorThisMenuItem;
+    private JMenu imagenIJ;
+    private JMenuItem restoreMenuItem;
+    private JMenuItem minimizeMenuItem;
+    private JMenuItem maximizeMenuItem;
+    private JMenuItem closeMenuItem;
 
 
     public static void main(String[] args) {
@@ -293,6 +298,7 @@ public class main {
         // Opciones desactivadas
         encondeXMLHMTLSpecialMenuItem.setEnabled(false);
 
+        /********************************************************************************************************************************************************************************************************************/
         // Funcionalidad de los botones
 
             /* boton linea */
@@ -305,6 +311,10 @@ public class main {
 
                 }
             });
+
+            /* boton imagen */
+        imagenIJ.setBorder(null);
+        imagenIJ.setFocusPainted(false);
 
             /* boton cuadrado */
             ButtonCuadrado.setBorder(null);
@@ -326,6 +336,17 @@ public class main {
                     System.exit(0);
                 }
             });
+
+        /********************************************************************************************************************************************************************************************************************/
+        // FILE
+
+        // Funcionamiento para FILE -> CLOSE
+        menuItemCloseProject.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
 
         // Funcionamiento para FILE -> EXIT
         menuItemExit.addActionListener(new ActionListener() {
