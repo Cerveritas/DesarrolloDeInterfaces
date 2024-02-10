@@ -1,10 +1,11 @@
 package EditorDeImagenes;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class editorGUI {
+public class editorGUI  {
     private JPanel PanelPrincipal;
     private JLabel IMAGENLabel;
     private JButton CONVERTIRButton;
@@ -32,6 +33,8 @@ public class editorGUI {
     private JMenuItem convertirIconoMenuItem;
     private JMenuItem pixeladaMenuItem;
     private JMenuItem sepiaMenuItem;
+    private JPanel panelBtotonesFunciones;
+    private JButton buttonImagen;
 
 
     public static void main(String[] args) {
@@ -65,6 +68,15 @@ public class editorGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
+            }
+        });
+
+        buttonImagen.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(PanelPrincipal, "EN MANTENIMIENTO..." +
+                        "Funcion de imprimir muy pronto...");
+
             }
         });
 
