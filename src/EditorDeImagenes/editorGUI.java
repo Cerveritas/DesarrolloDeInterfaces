@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -68,15 +69,18 @@ public class editorGUI  {
                 "Para ver parametros seleccionar efectos");
 
         // Quitar opciones visuales de botones
-
         ButtonX.setFocusPainted(false);
 
 
         //ButtonCuadrado.setBorder(null);
         ButtonCuadrado.setFocusPainted(false);
 
-        //ButtonLinea.setBorder(null);
-        ButtonCuadrado.setFocusPainted(false);
+
+        // TEXTO EN BOTONES
+        ButtonCuadrado.setToolTipText("Maximizar");
+        ButtonLinea.setToolTipText("Minimizar");
+        ButtonX.setToolTipText("Salir");
+        CONVERTIRButton.setToolTipText("Convertir");
 
 
 
@@ -96,6 +100,19 @@ public class editorGUI  {
             }
         });
 
+        ButtonCuadrado.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Frame ventana = (JFrame) SwingUtilities.getWindowAncestor(ButtonLinea);
+
+                if (ventana.getExtendedState() == JFrame.MAXIMIZED_BOTH) {
+                    ventana.setExtendedState(JFrame.NORMAL);
+                } else {
+                    ventana.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                }
+
+            }
+        });
 
 
         buttonImagen.addActionListener(new ActionListener() {
@@ -352,7 +369,9 @@ public class editorGUI  {
 
 
 
+
     }
+
 
 
 
