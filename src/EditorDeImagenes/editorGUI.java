@@ -364,6 +364,15 @@ public class editorGUI  {
         });
 
 
+        altoContrasteMenuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Icon icoo = new ImageIcon("src/EditorDeImagenes/CostaAltoContraste.jpg");
+                buttonImagen.setIcon(icoo);
+            }
+        });
+
+
 
 
 
@@ -371,6 +380,8 @@ public class editorGUI  {
 
 
     }
+
+
 
 
 
