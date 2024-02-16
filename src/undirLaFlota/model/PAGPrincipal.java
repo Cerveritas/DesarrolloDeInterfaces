@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class PAGPrincipal {
+
     public JPanel PanelPrincipalInicio;
     private JPanel FotoPanel;
     private JPanel TituloPanel;
@@ -14,31 +15,17 @@ public class PAGPrincipal {
     private JButton JUGARButton;
     private JLabel theShipLabel;
     private JLabel añoLabel;
-
-
-
-    /*Border bordeRedondeado = new Border() {
-        @Override
-        public void paintBorder(Component c, Graphics g, int x, int y, int width, int height) {
-            g.setColor(Color.BLACK);
-            g.fillRoundRect(x, y, width - 1, height - 1, 10, 10);
-
-
-        }
-
-        @Override
-        public Insets getBorderInsets(Component c) {
-            return new Insets(5, 5, 5, 5);
-        }
-
-        @Override
-        public boolean isBorderOpaque() {
-            return true;
-        }
-    };*/
+    private JMenu ARCHIVOMenu;
+    private JMenu OPCIONESMenu;
+    private JMenuBar MenuBar;
+    private JMenuItem cerrarMenuItem;
 
 
     public PAGPrincipal() {
+
+        //Quitar la barra superior
+
+
 
         /*JUGARButton.setBorder(bordeRedondeado);*/
         JUGARButton.setPreferredSize(new Dimension(250,20));
@@ -60,14 +47,17 @@ public class PAGPrincipal {
 
                 // Hace visible el nuevo JFrame
                 frame.setVisible(true);
-                PanelPrincipalInicio.setVisible(false);
 
 
 
+            }
+        });
 
 
-
-
+        cerrarMenuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
             }
         });
 

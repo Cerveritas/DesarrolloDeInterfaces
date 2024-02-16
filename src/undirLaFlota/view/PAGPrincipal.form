@@ -3,59 +3,117 @@
   <grid id="27dc6" binding="PanelPrincipalInicio" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="586" height="400"/>
+      <xy x="20" y="20" width="596" height="400"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-12499888"/>
+    </properties>
     <border type="none"/>
     <children>
-      <grid id="a2bcf" binding="FotoPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="a2bcf" binding="FotoPanel" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-5987164"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="3f2cc" class="javax.swing.JLabel" binding="barcoLabel">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-13620164"/>
               <font name="Fira Code" size="72" style="1"/>
               <text value="🛳"/>
             </properties>
           </component>
+          <grid id="9d5c0" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-5987164"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="b094c" class="javax.swing.JMenuBar" binding="MenuBar" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+                <constraints/>
+                <properties>
+                  <background color="-13620164"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="52808" class="javax.swing.JMenu" binding="ARCHIVOMenu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-2368551"/>
+                      <text value="ARCHIVO"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="4923c" class="javax.swing.JMenuItem" binding="cerrarMenuItem">
+                        <constraints/>
+                        <properties>
+                          <background color="-5987164"/>
+                          <text value="Cerrar"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="dcd28" class="javax.swing.JMenu" binding="OPCIONESMenu" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-2368551"/>
+                      <text value="OPCIONES"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <component id="44c9b" class="javax.swing.JLabel" binding="theShipLabel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font size="48"/>
+              <text value="----- THE SHIP -----"/>
+            </properties>
+          </component>
         </children>
       </grid>
-      <grid id="b9be2" binding="TituloPanel" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="b9be2" binding="TituloPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-5987164"/>
+        </properties>
         <border type="none"/>
         <children>
-          <component id="44c9b" class="javax.swing.JLabel" binding="theShipLabel">
-            <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <font size="48"/>
-              <text value="THE SHIP"/>
-            </properties>
-          </component>
           <component id="e28c8" class="javax.swing.JButton" binding="JUGARButton" default-binding="true">
             <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <foreground color="-13620164"/>
+              <background color="-13620164"/>
+              <font style="1"/>
+              <foreground color="-11750913"/>
               <text value="JUGAR"/>
             </properties>
           </component>
           <component id="6b403" class="javax.swing.JLabel" binding="añoLabel">
             <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font size="36"/>

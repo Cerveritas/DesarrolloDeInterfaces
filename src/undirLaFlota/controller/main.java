@@ -10,6 +10,7 @@ public class main {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("GUImainFOR");
+        frame.setUndecorated(true);
         frame.setContentPane(new PAGPrincipal().PanelPrincipalInicio);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
