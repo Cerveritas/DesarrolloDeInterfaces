@@ -1,4 +1,4 @@
-package undirLaFlota;
+package undirLaFlota.model;
 
 public class Barcos {
 
