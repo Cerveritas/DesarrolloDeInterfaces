@@ -32,15 +32,6 @@ public class GUImainFOR {
     private final String COLORBARCOS = "#AB25E5";
 
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("GUImainFOR");
-        frame.setContentPane(new GUImainFOR().PanelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
-        frame.setBounds(500,200,1000,700);
-
-    }
 
     public GUImainFOR() {
         botonesTableroEnemigo();
