@@ -1,4 +1,4 @@
-package undirLaFlota.model;
+package hundirLaFlota.model;
 
 import javax.swing.*;
 import java.awt.*;
@@ -27,6 +27,11 @@ public class GUImainFOR {
     private JLabel FRAGATALabel;
     private JLabel PORTAVIONESLabel;
     private JLabel SUBMARINOLabel;
+    private JButton FIREButton;
+    private JPanel PanelBotonesFunciones;
+    private JButton buttonLinea;
+    private JButton buttonCuadrado;
+    private JButton buttonX;
     private JButton[][] botones;
 
     private final String COLORBARCOS = "#AB25E5";
@@ -213,6 +218,13 @@ public class GUImainFOR {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showMessageDialog(PanelPrincipal, "LA PATERA OCUPA --> 2 ESPACIOS");
+            }
+        });
+
+        buttonX.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
             }
         });
 
