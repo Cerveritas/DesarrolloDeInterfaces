@@ -32,13 +32,23 @@ public class GUImainFOR {
     private JButton buttonLinea;
     private JButton buttonCuadrado;
     private JButton buttonX;
+    private JLabel kl;
     private JButton[][] botones;
+
+
 
     private final String COLORBARCOS = "#AB25E5";
 
 
 
+
+
+
     public GUImainFOR() {
+
+
+
+
         botonesTableroEnemigo();
         botonesTableroMio();
 
@@ -228,12 +238,31 @@ public class GUImainFOR {
             }
         });
 
+        buttonLinea.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame ventana = (JFrame) SwingUtilities.getWindowAncestor(buttonLinea);
+                ventana.setExtendedState(JFrame.ICONIFIED);
+            }
+        });
+
+        buttonCuadrado.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Frame ventana = (JFrame) SwingUtilities.getWindowAncestor(buttonCuadrado);
+
+                if (ventana.getExtendedState() == JFrame.MAXIMIZED_BOTH) {
+                    ventana.setExtendedState(JFrame.NORMAL);
+                } else {
+                    ventana.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                }
+            }
+        });
+
+
 
 
     }
-
-
-
 
 
 

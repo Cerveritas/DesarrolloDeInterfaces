@@ -20,7 +20,10 @@ public class PAGPrincipal {
     private JMenuItem cerrarMenuItem;
     private JMenuItem ColorMenuItem;
     private JMenuItem pantallaCompletaMenuItem;
+    public JTextField nombreText;
+    private JLabel NOMBREDECAPITANLabel;
     private boolean ColorOriginal;
+
 
 
     public PAGPrincipal() {
@@ -35,7 +38,6 @@ public class PAGPrincipal {
         JUGARButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
 
 
                 // Configura las propiedades del nuevo JFrame
@@ -104,6 +106,8 @@ public class PAGPrincipal {
             }
         });
 
+
+        nombreText.getText();
 
 
 
