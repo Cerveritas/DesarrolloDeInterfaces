@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="hundirLaFlota.model.PAGPrincipal">
+  <grid id="27dc6" binding="PanelPrincipalInicio" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="596" height="400"/>
+    </constraints>
+    <properties>
+      <background color="-12499888"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="a2bcf" binding="FotoPanel" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-5987164"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="3f2cc" class="javax.swing.JLabel" binding="barcoLabel">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-13620164"/>
+              <font name="Fira Code" size="72" style="1"/>
+              <text value="🛳"/>
+            </properties>
+          </component>
+          <grid id="9d5c0" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-5987164"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="b094c" class="javax.swing.JMenuBar" binding="MenuBar" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+                <constraints/>
+                <properties>
+                  <background color="-13620164"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="52808" class="javax.swing.JMenu" binding="ARCHIVOMenu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-2368551"/>
+                      <text value="ARCHIVO"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="4923c" class="javax.swing.JMenuItem" binding="cerrarMenuItem">
+                        <constraints/>
+                        <properties>
+                          <background color="-5987164"/>
+                          <text value="Cerrar"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="dcd28" class="javax.swing.JMenu" binding="OPCIONESMenu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-2368551"/>
+                      <text value="OPCIONES"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="97130" class="javax.swing.JMenuItem" binding="ColorMenuItem">
+                        <constraints/>
+                        <properties>
+                          <text value="Cambiar Color"/>
+                        </properties>
+                      </component>
+                      <component id="c9deb" class="javax.swing.JMenuItem" binding="pantallaCompletaMenuItem">
+                        <constraints/>
+                        <properties>
+                          <text value="Pantalla Completa"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="7b5d" class="javax.swing.JMenu" binding="AÑOMenu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+                    <constraints/>
+                    <properties>
+                      <background color="-13620164"/>
+                      <foreground color="-330497"/>
+                      <text value="AÑO"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="94259" class="javax.swing.JMenuItem" binding="año12AcMenuItem">
+                        <constraints/>
+                        <properties>
+                          <text value="año 12.ac"/>
+                        </properties>
+                      </component>
+                      <component id="c0ec7" class="javax.swing.JMenuItem" binding="año1920MenuItem">
+                        <constraints/>
+                        <properties>
+                          <text value="año 1920"/>
+                        </properties>
+                      </component>
+                      <component id="7cd5b" class="javax.swing.JMenuItem" binding="año2029MenuItem">
+                        <constraints/>
+                        <properties>
+                          <text value="año 2029"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <component id="44c9b" class="javax.swing.JLabel" binding="theShipLabel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font size="48"/>
+              <text value="----- THE SHIP -----"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="b9be2" binding="TituloPanel" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-5987164"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="e28c8" class="javax.swing.JButton" binding="JUGARButton" default-binding="true">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-13620164"/>
+              <font style="1"/>
+              <foreground color="-11750913"/>
+              <text value="JUGAR"/>
+            </properties>
+          </component>
+          <component id="6b403" class="javax.swing.JLabel" binding="añoLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font size="36"/>
+              <text value="1492"/>
+            </properties>
+          </component>
+          <component id="f2926" class="javax.swing.JTextField" binding="nombreText">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="1" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-7434610"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="c420c" class="javax.swing.JLabel" binding="NOMBREDECAPITANLabel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="1" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="NOMBRE DE CAPITAN:"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

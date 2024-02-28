@@ -1,7 +1,6 @@
-package undirLaFlota.controller;
+package hundirLaFlota.controller;
 
-import undirLaFlota.model.GUImainFOR;
-import undirLaFlota.model.PAGPrincipal;
+import hundirLaFlota.model.PAGPrincipal;
 
 import javax.swing.*;
 
@@ -10,6 +9,7 @@ public class main {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("GUImainFOR");
+        frame.setUndecorated(true);
         frame.setContentPane(new PAGPrincipal().PanelPrincipalInicio);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
