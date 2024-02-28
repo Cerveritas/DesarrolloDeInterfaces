@@ -22,6 +22,10 @@ public class PAGPrincipal {
     private JMenuItem pantallaCompletaMenuItem;
     public JTextField nombreText;
     private JLabel NOMBREDECAPITANLabel;
+    private JMenu AÑOMenu;
+    private JMenuItem año12AcMenuItem;
+    private JMenuItem año1920MenuItem;
+    private JMenuItem año2029MenuItem;
     private boolean ColorOriginal;
 
 
@@ -108,6 +112,28 @@ public class PAGPrincipal {
 
 
         nombreText.getText();
+
+
+        año12AcMenuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                añoLabel.setText("12A.C");
+            }
+        });
+
+        año1920MenuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                añoLabel.setText("1920");
+            }
+        });
+
+        año2029MenuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                añoLabel.setText("2029");
+            }
+        });
 
 
 
